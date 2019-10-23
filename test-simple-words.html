@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Learning Sanskrit</title>
+  <link type="text/css" href="https://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css" rel="stylesheet" /> 
+  <link rel="stylesheet" type="text/css" media="all" href="style.css?version=1.12" />
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous" type="9ed0c5879a05d627e3716607-text/javascript"></script>
+  <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js" integrity="sha256-xNjb53/rY+WmG+4L6tTl9m6PpqknWZvRt0rO1SRnJzw=" crossorigin="anonymous" type="9ed0c5879a05d627e3716607-text/javascript"></script>
+  <script type="text/javascript" src="functions.js"></script>
+  <script type="text/javascript" src="test-simple-words.js"></script>
+  <script type="text/javascript">$(function() {startup();});</script> 
+    </head>
+    <body>
+<div id="header-banner" ><img style="vertical-align:middle; margin:0 20px; width:140px;" src="images/logo.PNG"/><img style="vertical-align:middle" src="images/title.PNG"/><a href="learn-letters.html" id="step-1" class="number-green" style="background-position:24px 0px"><p>Learn Letters</p></a><a href="test-simple-syllables.html" id="step-2" class="number-green" style="background-position:-79px 0"><p>Test Simple Syllables</p></a><a href="learn-contracted-vowels.html" id="step-3" class="number-green" style="background-position:-182px 0"><p>Lean Contracted Vowels</p></a><a href="test-simple-words.html" id="step-4" class="number-orange" style="background-position:-285px 0"><p>Test Simple Words</p></a><a href="learn-conjuncts.html" id="step-5" class="number-green" style="background-position:-388px 0"><p>Learn Conjuncts</p></a><a href="test-all-words.html" id="step-6" class="number-green" style="background-position:-492px 0"><p>Test Words with Conjuncts</p></a><a href="write-your-own.html" id="step-7" class="number-green" style="background-position:-595px 0"><p>Write Your Own Words</p></a></div>
+	<div id="extra-options">
+		<label class="options-header">Letters: </label>
+		<input type="checkbox" id="by-syllables"/><label for="by-syllables">By Syllables</label>
+		<input type="checkbox" id="by-transliteration"/><label for="by-transliteration">Transliteration</label>
+		<input type="checkbox" id="by-translation"/><label for="by-translation">Translation</label>
+	</div>
+	<div id="view-options">
+		<label class="options-header">View Options: </label>
+ 		<input type="radio" id="iast-only" name="radio-view"/><label for="iast-only">IAST</label>
+ 		<input type="radio" id="devanagari-only" name="radio-view"/><label for="devanagari-only">Devanāgarī</label>
+	</div>
+<br/>
+<div id="main-page">
+		<div id="guidance" class="ui-widget"><div>
+			<span id="guidance-head">Practice Reading and Writing words</span><br/>Choose words from the left panel, or just browse through the words with the keys →, ←.<br/>Choose your view options with the buttons above.<br/>You can practice reading by choosing Devanāgarī or you can practice writing by choosing IAST and writing the Devanāgarī by yourself.
+		</div></div>
+	<div id="main-portion">
+		<div id="word-list">
+			<ul>
+			</ul>
+		</div>
+		<div id="main-block">
+			<div id="word-navigation">
+				<button id="navigate-prev"></button>
+				<button id="navigate-next"></button>
+			</div>
+			<div id="single-word">
+			</div>
+			<div id="translation">
+			</div>
+			<div id="transliteration">
+			</div>
+			<div id="equations">
+			</div>
+       		</div> 
+	</div>
+</div>
+</body>
+</html>

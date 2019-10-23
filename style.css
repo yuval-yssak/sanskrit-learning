@@ -1,0 +1,329 @@
+body {
+  font-size: 11px;
+  height:100%;
+  font-family: "Lohit Devanagari";
+}
+#main-menu {
+  list-style-type: none;
+  background-color: AliceBlue;
+  padding: 0;
+  margin: 30px auto 10px;
+  width: 80%;
+}
+
+#main-menu li {
+  display: inline-block;
+  position: relative;
+}
+
+#main-menu li a {
+  padding: 0 15px;
+}
+
+div#header {
+   font-size:inherit;
+}
+
+.letters-group div {
+   font-size: 65px;   
+   display:inline-block;
+   text-align: right;
+   color: #005672;
+}
+
+#single-word div, #individual-letter {
+   margin-bottom: 30px;
+   font-size: 120px;
+   line-height: 130%;
+   color: #005672;
+}
+
+#individual-letter {
+  margin-top: 100px;
+}
+
+#main-block #syllables div {
+  font-size: 100px;
+  margin-left: 100px;
+}
+
+#individual-letter div {
+   display: inline-block;
+}
+
+.letters-group div:hover {
+   color:#f68814;
+   font-weight:bold;
+}
+
+.mosaic {
+  background-color: grey;
+  margin:5px;
+}
+
+.hidden {
+  color:grey;
+}
+
+div.transliteration {
+  color:#56a4a1;
+  font-size: 30%;
+  display: inline;
+}
+
+#vowels-for-consonant div {
+  display:inline-block;
+  width:20%;
+}
+
+#vowels-for-consonant div:hover {
+   color:blue;
+   font-weight:bold;
+}
+#vowels-for-consonant div div {
+  display:inline;
+}
+
+
+.ui-buttonset label {
+  margin-top: 0.3em;
+}
+
+.ui-button .ui-button-text {
+  line-height: 1;
+  font-size: 0.8em;
+}
+
+.ui-button-text-only .ui-button-text {
+  padding: 0.4em 0.5em;
+}
+
+#guidance {
+  cursor: pointer;
+  width: 250px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+}
+
+#guidance div {
+  padding: 0 .7em;
+}
+
+#guidance #guidance-head {
+  color: orange;
+  font-weight: bold;
+}
+
+#guidance-handle {
+  margin-top: 20px;
+  background: PapayaWhip;
+}
+
+#word-list, #word-list-handle {
+  #position:fixed;
+  #left:0;
+  #height:100%;
+  #top:0px;
+  #vertical-align:top;
+}
+
+#word-list {
+  width:180px;
+  border-right:1px solid #800;
+  color:black;
+  background-color:#eee;
+  display: none;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+#word-list-handle {
+  width:5px;
+  background-color:#800;
+  color: #800;
+  padding:0;
+  border-right:1.3em solid white;
+}
+
+div#word-list {
+  background-repeat: no-repeat;
+  background-color: #def4f6;
+  display: inline-block;
+}
+
+div#word-list-toggle {
+  background-color:darkGray;
+  text-align: center;
+  vertical-align: middle;
+  width: 40px;
+  float: left;
+  top: 0;
+  bottom: 0;
+}
+
+div#word-list ul {
+  cursor: pointer;
+  margin: 0;
+  padding: 0;
+}
+
+div#word-list ul li {
+  display: block;
+  box-shadow: 1px 1px 2px rgba(0, 0, 155, 0.21);
+  background-image: url("images/little_arrow.PNG");
+  background-position: 148px 4px;
+  background-repeat: no-repeat;
+}
+
+div#main-block {
+  margin-left: 50px;
+  vertical-align: top;
+  width: 645px;
+  display: inline-block;
+  margin-top: -21px;
+}
+
+#outside-block {
+  position: relative;
+}
+
+.options-header {
+  background-color: #005672;
+  padding: 2px 33px;
+  color: white;
+}
+
+#view-options, #extra-options, #letter-categories, #show-state {
+  margin-top: 10px;
+  display: inline-block;
+}
+
+.consonant-base {
+  cursor: pointer;
+}
+
+#equations {
+   font-size: 45px;   
+   color: #005672;
+}
+
+#equations div {
+  margin-bottom: 30px;
+}
+
+.equation {
+  display: inline;
+  color: #f68712;
+}
+
+div#word-navigation {
+  float: right;
+}
+
+div#word-navigation button {
+  background-color: white;
+  width: 41px;
+  height: 41px;
+  border: none;
+  margin-right: 40px;
+}
+
+div#word-navigation button#navigate-prev {
+  background-image: url("images/button_previous.PNG");
+}
+
+div#word-navigation button#navigate-next {
+  background-image: url("images/button_next.PNG");
+}
+
+div#translation {
+  color: #a6d81c;
+  font-size: 52px;
+  margin-bottom: 30px;
+}
+
+div#transliteration {
+  color: #4c9f9b;
+  font-size: 52px;
+  margin-bottom: 30px;
+}
+
+div#transliteration div {
+  display: inline-block;
+  margin-right: 20px; 
+}
+
+div#transliteration div:hover {
+  color:darkGreen;
+}
+
+.transliteration-syllable {
+  display: inline;
+  color:#4c9f9b;
+}
+
+div#write-inputs {
+  text-align: center;
+  margin-top: 20px;
+}
+
+div#header-banner {
+  background-color:#8cd9e3;
+  width: 1179px;
+}
+div#write-inputs input#new-word {
+  width: 50%;
+  margin-top:20px;
+  margin-bottom:40px;
+  color:white;
+}
+
+.number-green {
+  vertical-align: middle;
+  margin: 0 4px;
+  background-image: url("images/seven_steps_green.PNG");
+  height: 41px;
+  width: 90px;
+  background-repeat: no-repeat;
+  display:inline-block;
+  text-decoration: none;
+  position:relative;
+  top: -14px;
+}
+
+.number-orange {
+  vertical-align: middle;
+  margin: 0 4px;
+  background-image: url("images/seven_steps_orange.PNG");
+  height: 41px;
+  width: 90px;
+  background-repeat: no-repeat;
+  display:inline-block;
+  text-decoration: none;
+  position:relative;
+  top: -14px;
+}
+
+.number-orange:hover > p, .number-green:hover > p {
+  color: red;
+} 
+
+.number-orange > p, .number-green > p {
+  text-align: center;
+  position: relative;
+  top: 30px;
+  font-size: 11px;
+  color: #005672;
+}
+
+#main-page {
+  position:relative;
+  max-width: 1179px;
+}
+
+#main-portion {
+  margin-left: 250px;
+  margin-top: 60px;
+  font-family: "Lohit Devanagari";
+}
