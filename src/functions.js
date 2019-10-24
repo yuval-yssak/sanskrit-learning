@@ -1,6 +1,5 @@
 import $ from 'jquery'
 
-
 var handleState,
   position,
   withTransliteration,
@@ -268,28 +267,70 @@ export function getAllLetters() {
   return allLetters
 }
 
-export function getVowels() {
+function getVowels() {
   if (allVowels === undefined) {
-    var vowels = []
-    vowels.push({ a: 'अ' })
-    vowels.push({ ā: 'आ' })
-    vowels.push({ i: 'इ' })
-    vowels.push({ ī: 'ई' })
-    vowels.push({ u: 'उ' })
-    vowels.push({ ū: 'ऊ' })
-    vowels.push({ ṛ: 'ऋ' })
-    vowels.push({ ṝ: 'ॠ' })
-    vowels.push({ ḷ: 'ऌ' })
-    vowels.push({ ḹ: 'ॡ' })
-    vowels.push({ e: 'ए' })
-    vowels.push({ ai: 'ऐ' })
-    vowels.push({ o: 'ओ' })
-    vowels.push({ au: 'औ' })
-    vowels.push({ ṃ: 'ं' })
-    vowels.push({ ḥ: 'ः' })
-    allVowels = vowels
+    var vowels = [];
+    vowels.push({"a": "अ"});
+    vowels.push({"ā": "आ"});
+    vowels.push({"i": "इ"});
+    vowels.push({"ī": "ई"});
+    vowels.push({"u": "उ"});
+    vowels.push({"ū": "ऊ"});
+    vowels.push({"ṛ": "ऋ"});
+    vowels.push({"ṝ": "ॠ"});
+    vowels.push({"ḷ": "ऌ"});
+    vowels.push({"ḹ": "ॡ"});
+    vowels.push({"e": "ए"});
+    vowels.push({"ai": "ऐ"});
+    vowels.push({"o": "ओ"});
+    vowels.push({"au": "औ"});
+    vowels.push({"ṃ": "ं"});
+    vowels.push({"ḥ": "ः"});
+    allVowels = vowels;
   }
-  return allVowels
+  return allVowels;
+}
+
+
+export function vowels() {
+  return [
+    'a',
+    'ā',
+    'i',
+    'ī',
+    'u',
+    'ū',
+    'ṛ',
+    'ṝ',
+    'ḷ',
+    'ḹ',
+    'e',
+    'a',
+    'o',
+    'a',
+    'ṃ',
+    'ḥ'
+  ]
+}
+export function lettersTransliterationMap() {
+  return {
+    a: 'अ',
+    ā: 'आ',
+    i: 'इ',
+    ī: 'ई',
+    u: 'उ',
+    ū: 'ऊ',
+    ṛ: 'ऋ',
+    ṝ: 'ॠ',
+    ḷ: 'ऌ',
+    ḹ: 'ॡ',
+    e: 'ए',
+    ai: 'ऐ',
+    o: 'ओ',
+    au: 'औ',
+    ṃ: 'ं',
+    ḥ: 'ः'
+  }
 }
 
 export function getContractedVowels() {
@@ -623,9 +664,9 @@ export function showTheLetters() {
     }
   }
   // for (var i = 0; i < getLetters().length; i++) {
-    // var key = Object.keys(getLetters()[i])[0]
-    // var val = getLetters()[i][key]
-    // appendLetter(key, val, i)
+  // var key = Object.keys(getLetters()[i])[0]
+  // var val = getLetters()[i][key]
+  // appendLetter(key, val, i)
   // }
   $('#individual-letter').empty()
   selectedLetterOrigin = selectedLetterTransliteration = ''

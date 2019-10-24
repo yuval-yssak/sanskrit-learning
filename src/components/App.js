@@ -5,13 +5,15 @@ import LearnLetters from './LearnLetters'
 
 export default props => {
   return (
-    <Router>   
+    <Router>
       <Header />
       <Switch>
-          <Route path="/learn-letters">
+        <Route path='/learn-letters'>
+          <div id='main-page'>
             <LearnLetters />
-          </Route>
-        </Switch>
+          </div>
+        </Route>
+      </Switch>
     </Router>
   )
 }
