@@ -269,69 +269,118 @@ export function getAllLetters() {
 
 function getVowels() {
   if (allVowels === undefined) {
-    var vowels = [];
-    vowels.push({"a": "अ"});
-    vowels.push({"ā": "आ"});
-    vowels.push({"i": "इ"});
-    vowels.push({"ī": "ई"});
-    vowels.push({"u": "उ"});
-    vowels.push({"ū": "ऊ"});
-    vowels.push({"ṛ": "ऋ"});
-    vowels.push({"ṝ": "ॠ"});
-    vowels.push({"ḷ": "ऌ"});
-    vowels.push({"ḹ": "ॡ"});
-    vowels.push({"e": "ए"});
-    vowels.push({"ai": "ऐ"});
-    vowels.push({"o": "ओ"});
-    vowels.push({"au": "औ"});
-    vowels.push({"ṃ": "ं"});
-    vowels.push({"ḥ": "ः"});
-    allVowels = vowels;
+    var vowels = []
+    vowels.push({ a: 'अ' })
+    vowels.push({ ā: 'आ' })
+    vowels.push({ i: 'इ' })
+    vowels.push({ ī: 'ई' })
+    vowels.push({ u: 'उ' })
+    vowels.push({ ū: 'ऊ' })
+    vowels.push({ ṛ: 'ऋ' })
+    vowels.push({ ṝ: 'ॠ' })
+    vowels.push({ ḷ: 'ऌ' })
+    vowels.push({ ḹ: 'ॡ' })
+    vowels.push({ e: 'ए' })
+    vowels.push({ ai: 'ऐ' })
+    vowels.push({ o: 'ओ' })
+    vowels.push({ au: 'औ' })
+    vowels.push({ ṃ: 'ं' })
+    vowels.push({ ḥ: 'ः' })
+    allVowels = vowels
   }
-  return allVowels;
+  return allVowels
 }
 
+export const vowels = () => [
+  'a',
+  'ā',
+  'i',
+  'ī',
+  'u',
+  'ū',
+  'ṛ',
+  'ṝ',
+  'ḷ',
+  'ḹ',
+  'e',
+  'a',
+  'o',
+  'a',
+  'ṃ',
+  'ḥ'
+]
 
-export function vowels() {
-  return [
-    'a',
-    'ā',
-    'i',
-    'ī',
-    'u',
-    'ū',
-    'ṛ',
-    'ṝ',
-    'ḷ',
-    'ḹ',
-    'e',
-    'a',
-    'o',
-    'a',
-    'ṃ',
-    'ḥ'
-  ]
-}
-export function lettersTransliterationMap() {
-  return {
-    a: 'अ',
-    ā: 'आ',
-    i: 'इ',
-    ī: 'ई',
-    u: 'उ',
-    ū: 'ऊ',
-    ṛ: 'ऋ',
-    ṝ: 'ॠ',
-    ḷ: 'ऌ',
-    ḹ: 'ॡ',
-    e: 'ए',
-    ai: 'ऐ',
-    o: 'ओ',
-    au: 'औ',
-    ṃ: 'ं',
-    ḥ: 'ः'
-  }
-}
+export const consonants = () => [
+  'ka',
+  'kha',
+  'ga',
+  'gha',
+  'ṅa',
+  'ca',
+  'cha',
+  'ja',
+  'jha',
+  'ña',
+  'ṭa',
+  'ṭha',
+  'ḍa',
+  'ḍha',
+  'ṇa',
+  'ta',
+  'tha',
+  'da',
+  'dha',
+  'na',
+  'pa',
+  'pha',
+  'ba',
+  'bha',
+  'ma'
+]
+
+export const lettersTransliterationMap = () => ({
+  a: 'अ',
+  ā: 'आ',
+  i: 'इ',
+  ī: 'ई',
+  u: 'उ',
+  ū: 'ऊ',
+  ṛ: 'ऋ',
+  ṝ: 'ॠ',
+  ḷ: 'ऌ',
+  ḹ: 'ॡ',
+  e: 'ए',
+  ai: 'ऐ',
+  o: 'ओ',
+  au: 'औ',
+  ṃ: 'ं',
+  ḥ: 'ः',
+  ka: 'क',
+  kha: 'ख',
+  ga: 'ग',
+  gha: 'घ',
+  ṅa: 'ङ',
+  ca: 'च',
+  cha: 'छ',
+  ja: 'ज',
+  jha: 'झ',
+  ña: 'ञ',
+  ṭa: 'ट',
+  ṭha: 'ठ',
+  ḍa: 'ड',
+  ḍha: 'ढ',
+  ṇa: 'ण',
+  ta: 'त',
+  tha: 'थ',
+  da: 'द',
+  dha: 'ध',
+  na: 'न',
+  pa: 'प',
+  pha: 'फ',
+  ba: 'ब',
+  bha: 'भ',
+  ma: 'म'
+})
 
 export function getContractedVowels() {
   var contractedVowels = []

@@ -1,10 +1,11 @@
-import React, { useEffect } from 'react'
+import React, { useState, useEffect } from 'react'
 import $ from 'jquery'
 import {
   generalStartup,
   showTheLetters,
   getVowels,
   vowels,
+  consonants,
   lettersTransliterationMap,
   getConsonants,
   getSemiVowels,
@@ -35,33 +36,80 @@ const LearnLettersGuidance = () => (
   </div>
 )
 
-const Letters = ({ group }) => (
-  <div className='letters-group'>
-    {group === 'vowels' &&
-      vowels().map(vowel => (
-        <div id={vowel} style={{ width: '129px' }}>
-          {lettersTransliterationMap()[vowel]}
+const Letters = ({ group }) => {
+  let letters
+
+  if (group === 'vowels') letters = vowels()
+  else if (group === 'consonants') letters = consonants()
+  else letters = []
+
+  return (
+    <div className='letters-group'>
+      {letters.map(letter => (
+        <div id={letter} style={{ width: '129px' }}>
+          {lettersTransliterationMap()[letter]}
         </div>
       ))}
-  </div>
-)
+    </div>
+  )
+}
 
 export default props => {
-  useEffect(() => {
-    // $("#letter-categories input#vowels").data("getLettersFunction", getVowels);
-    // $("#letter-categories input#consonants").data("getLettersFunction", getConsonants);
-    // $("#letter-categories input#semi-vowels").data("getLettersFunction", getSemiVowels);
-    // $("#letter-categories input#sibilants").data("getLettersFunction", getSibilants);
-    // $("#letter-categories input#aspirate-and-compounds").data("getLettersFunction", getAspirateAndCompoundsAndAvagraha);
-  }, [])
+  const [selectedGroup, setSelectedGroup] = useState('vowels')
+
   return (
     <>
+      <div id='letter-categories'>
+        <label className='options-header'>Letters: </label>
+        <input
+          onChange={e => {
+            if (e.target.value === 'on') {
+              setSelectedGroup('vowels')
+            }
+          }}
+          type='radio'
+          id='vowels'
+          name='radio'
+        />
+        <label htmlFor='vowels'>Vowels</label>
+        <input
+          onChange={e => {
+            if (e.target.value === 'on') {
+              setSelectedGroup('consonants')
+            }
+          }}
+          type='radio'
+          id='consonants'
+          name='radio'
+        />
+        <label htmlFor='consonants'>Consonants</label>
+        <input type='radio' id='semi-vowels' name='radio' />
+        <label htmlFor='semi-vowels'>Semi Vowels</label>
+        <input type='radio' id='sibilants' name='radio' />
+        <label htmlFor='sibilants'>Sibilants</label>
+        <input type='radio' id='aspirate-and-compounds' name='radio' />
+        <label htmlFor='aspirate-and-compounds'>
+          Aspirate and Special Compounds
+        </label>
+      </div>
+      <div id='view-options'>
+        <label className='options-header'>View Options: </label>
+        <input type='radio' id='iast-only' name='radio-view' />
+        <label htmlFor='iast-only'>IAST only</label>
+        <input type='radio' id='iast-with-devanagari' name='radio-view' />
+        <label htmlFor='iast-with-devanagari'>IAST with Devanāgarī</label>
+        <input type='radio' id='devanagari-only' name='radio-view' />
+        <label htmlFor='devanagari-only'>Devanāgarī only</label>
+        <input type='radio' id='devanagari-with-iast' name='radio-view' />
+        <label htmlFor='devanagari-with-iast'>Devanāgarī with IAST</label>
+      </div>
+
       <div id='guidance' class='ui-widget'>
         <LearnLettersGuidance />
       </div>
       <div id='main-portion'>
         <div id='main-block'>
-          <Letters group={'vowels'} />
+          <Letters group={selectedGroup} />
           <div className='letters-group'></div>
           <div id='individual-letter'></div>
           <input type='text' style={{ color: 'white' }}></input>
