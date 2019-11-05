@@ -1,24 +1,5 @@
-import React, { useState, useEffect } from 'react'
-import $ from 'jquery'
-import {
-  generalStartup,
-  showTheLetters,
-  getVowels,
-  vowels,
-  consonants,
-  lettersTransliterationMap,
-  getConsonants,
-  getSemiVowels,
-  getSibilants,
-  getAspirateAndCompoundsAndAvagraha,
-  preventDefaultEvent,
-  onKeyShowLetter,
-  letters,
-  getLettersPart,
-  getOrigin,
-  withTransliteration,
-  getTransliteration
-} from '../functions'
+import React, { useState } from 'react'
+import { vowels, consonants, lettersTransliterationMap } from '../functions'
 
 const LearnLettersGuidance = () => (
   <div>
@@ -36,27 +17,20 @@ const LearnLettersGuidance = () => (
   </div>
 )
 
-const Letters = ({ group }) => {
-  let letters
-
-  if (group === 'vowels') letters = vowels()
-  else if (group === 'consonants') letters = consonants()
-  else letters = []
-
-  return (
-    <div className='letters-group'>
-      {letters.map(letter => (
-        <div id={letter} style={{ width: '129px' }}>
+const Letters = ({ group }) => (
+  <div className='letters-group'>
+    {group &&
+      group.map(letter => (
+        <div id={letter} key={letter} style={{ width: '129px' }}>
           {lettersTransliterationMap()[letter]}
         </div>
       ))}
-    </div>
-  )
-}
+  </div>
+)
 
-export default props => {
-  const [selectedGroup, setSelectedGroup] = useState('vowels')
-
+export default () => {
+  const [selectedGroup, setSelectedGroup] = useState(vowels)
+  console.log(selectedGroup)
   return (
     <>
       <div id='letter-categories'>
@@ -64,7 +38,7 @@ export default props => {
         <input
           onChange={e => {
             if (e.target.value === 'on') {
-              setSelectedGroup('vowels')
+              setSelectedGroup(vowels)
             }
           }}
           type='radio'
@@ -75,7 +49,7 @@ export default props => {
         <input
           onChange={e => {
             if (e.target.value === 'on') {
-              setSelectedGroup('consonants')
+              setSelectedGroup(consonants)
             }
           }}
           type='radio'
@@ -104,7 +78,7 @@ export default props => {
         <label htmlFor='devanagari-with-iast'>Devanāgarī with IAST</label>
       </div>
 
-      <div id='guidance' class='ui-widget'>
+      <div id='guidance' className='ui-widget'>
         <LearnLettersGuidance />
       </div>
       <div id='main-portion'>
