@@ -291,96 +291,24 @@ function getVowels() {
   return allVowels
 }
 
-export const vowels = () => [
-  'a',
-  'ā',
-  'i',
-  'ī',
-  'u',
-  'ū',
-  'ṛ',
-  'ṝ',
-  'ḷ',
-  'ḹ',
-  'e',
-  'ai',
-  'o',
-  'au',
-  'ṃ',
-  'ḥ'
-]
+export function getAspirateAndCompounds() {
+  if (allOthers === undefined) {
+    var letters = []
+    letters.push({ ha: 'ह' })
+    letters.push({ jña: 'ज्ञ' })
+    letters.push({ tra: 'त्र' })
+    letters.push({ kṣa: 'क्ष' })
+    allOthers = letters
+  }
+  return allOthers
+}
 
-export const consonants = () => [
-  'ka',
-  'kha',
-  'ga',
-  'gha',
-  'ṅa',
-  'ca',
-  'cha',
-  'ja',
-  'jha',
-  'ña',
-  'ṭa',
-  'ṭha',
-  'ḍa',
-  'ḍha',
-  'ṇa',
-  'ta',
-  'tha',
-  'da',
-  'dha',
-  'na',
-  'pa',
-  'pha',
-  'ba',
-  'bha',
-  'ma'
-]
+export function getAvagraha() {
+  var avagraha = []
+  avagraha.push({ "'": 'ऽ' })
+  return avagraha
+}
 
-export const lettersTransliterationMap = () => ({
-  a: 'अ',
-  ā: 'आ',
-  i: 'इ',
-  ī: 'ई',
-  u: 'उ',
-  ū: 'ऊ',
-  ṛ: 'ऋ',
-  ṝ: 'ॠ',
-  ḷ: 'ऌ',
-  ḹ: 'ॡ',
-  e: 'ए',
-  ai: 'ऐ',
-  o: 'ओ',
-  au: 'औ',
-  ṃ: 'ं',
-  ḥ: 'ः',
-  ka: 'क',
-  kha: 'ख',
-  ga: 'ग',
-  gha: 'घ',
-  ṅa: 'ङ',
-  ca: 'च',
-  cha: 'छ',
-  ja: 'ज',
-  jha: 'झ',
-  ña: 'ञ',
-  ṭa: 'ट',
-  ṭha: 'ठ',
-  ḍa: 'ड',
-  ḍha: 'ढ',
-  ṇa: 'ण',
-  ta: 'त',
-  tha: 'थ',
-  da: 'द',
-  dha: 'ध',
-  na: 'न',
-  pa: 'प',
-  pha: 'फ',
-  ba: 'ब',
-  bha: 'भ',
-  ma: 'म'
-})
 
 export function getContractedVowels() {
   var contractedVowels = []
