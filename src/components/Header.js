@@ -28,10 +28,10 @@ const Header = ({ location }) => {
           <p>Learn Letters</p>
         </Link>
         <Link
-          to='test-simple-syllables'
+          to='read-simple-words'
           id='step-2'
           className={
-            selectedPage === 'test-simple-syllables'
+            selectedPage === 'read-simple-words'
               ? 'number-orange'
               : 'number-green'
           }

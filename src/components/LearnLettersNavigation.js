@@ -10,7 +10,6 @@ import {
 
 export default ({ setSelectedGroup, setViewMode }) => (
   <>
-    {' '}
     <div id='letter-categories'>
       <label className='options-header'>Letters: </label>
       <input
