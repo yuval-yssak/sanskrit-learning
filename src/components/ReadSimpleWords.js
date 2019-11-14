@@ -12,13 +12,17 @@ const SingleWordTest = ({
 }) => (
   <div id="main-block">
     <div id="single-word">
-      <div>{word[0]}</div>
+      <div>{word[0] /* TODO: transliterate here to Devanagari according to viewmode */}</div>
     </div>
-    {extraOptionTranslation === true && <div id="translation">{word[1]}</div>}
+    {!!extraOptionTranslation && <div id="translation">{word[1]}</div>}
+    {!!extraOptionTransliteration && <div id="transliteration">{word[0]}</div>}
+    
   </div>
 )
+
 export default () => {
   const [viewMode, setViewMode] = useState(viewModes.DEVANAGARI_ONLY)
+  // TODO: Simplify state to one object with flags
   const [extraOptionBySyllables, setExtraOptionBySyllables] = useState(false)
   const [extraOptionTransliteration, setExtraOptionTransliteration] = useState(
     false
