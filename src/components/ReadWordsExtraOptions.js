@@ -1,6 +1,21 @@
-import React from 'react'
-import * as extraOptions from '../lib/extraOptions'
-import * as viewModes from '../lib/viewModes'
+import React from "react";
+import * as extraOptions from "../lib/extraOptions";
+import * as viewModes from "../lib/viewModes";
+
+import Radio from "@material-ui/core/Radio";
+import FormGroup from "@material-ui/core/FormGroup";
+import FormControlLabel from "@material-ui/core/FormControlLabel";
+import Switch from "@material-ui/core/Switch";
+import FormControl from "@material-ui/core/FormControl";
+import FormLabel from "@material-ui/core/FormLabel";
+import { makeStyles } from "@material-ui/core/styles";
+import RadioGroup from "@material-ui/core/RadioGroup";
+
+const useStyles = makeStyles(theme => ({
+  formControl: {
+    margin: theme.spacing(3)
+  }
+}));
 
 export default ({
   extraOptionBySyllables,
@@ -9,53 +24,69 @@ export default ({
   setExtraOptionTransliteration,
   extraOptionTranslation,
   setExtraOptionTranslation,
+  viewMode,
   setViewMode
-}) => (
-  <>
-    <div id='extra-options'>
-      <label className='options-header'>Letters: </label>
-      <input
-        type='checkbox'
-        id='by-syllables'
-        checked={extraOptionBySyllables}
-        onChange={e => setExtraOptionBySyllables(e.target.checked)}
-      />
-      <label htmlFor='by-syllables'>By Syllables</label>
-      <input
-        type='checkbox'
-        id='by-transliteration'
-        checked={extraOptionTransliteration}
-        onChange={e => setExtraOptionTransliteration(e.target.checked)}
-      />
-      <label htmlFor='by-transliteration'>Transliteration</label>
-      <input
-        type='checkbox'
-        id='by-translation'
-        checked={setExtraOptionTranslation}
-        onChange={e => setExtraOptionTranslation(e.target.checked)}
-      />
-      <label htmlFor='by-translation'>Translation</label>}
+}) => {
+  const classes = useStyles();
+
+  return (
+    <div id="extra-options">
+      <label className="options-header">Letters: </label>
+      <FormGroup row>
+        <FormControlLabel
+          control={
+            <Switch
+              checked={extraOptionBySyllables}
+              onChange={e => setExtraOptionBySyllables(e.target.checked)}
+              value={extraOptions.BY_SYLLABLES}
+              color="primary"
+            />
+          }
+          label="By Syllables"
+        />
+        <FormControlLabel
+          control={
+            <Switch
+              checked={extraOptionTransliteration}
+              onChange={e => setExtraOptionTransliteration(e.target.checked)}
+              value={extraOptions.TRANSLITERATION}
+              color="primary"
+            />
+          }
+          label="Transliteration"
+        />
+        <FormControlLabel
+          control={
+            <Switch
+              checked={extraOptionTranslation}
+              onChange={e => setExtraOptionTranslation(e.target.checked)}
+              value={extraOptions.TRANSLATION}
+              color="primary"
+            />
+          }
+          label="Translation"
+        />
+      </FormGroup>
+      <FormControl component="fieldset" className={classes.formControl}>
+        <FormLabel component="legend">View Options</FormLabel>
+        <RadioGroup
+          aria-label="gender"
+          name="gender1"
+          value={viewMode}
+          onChange={e => setViewMode(e.target.value)}
+        >
+          <FormControlLabel
+            value={viewModes.DEVANAGARI_ONLY}
+            control={<Radio />}
+            label="Devanagari"
+          />
+          <FormControlLabel
+            value={viewModes.IAST_ONLY}
+            control={<Radio />}
+            label="IAST"
+          />
+        </RadioGroup>
+      </FormControl>
     </div>
-    <div id='view-options'>
-      <label className='options-header'>View Options: </label>
-      <input
-        type='radio'
-        id='iast-only'
-        name='radio-view'
-        onChange={e => {
-          if (e.target.value === 'on') setViewMode(viewModes.IAST_ONLY)
-        }}
-      />
-      <label htmlFor='iast-only'>IAST</label>
-      <input
-        type='radio'
-        id='devanagari-only'
-        name='radio-view'
-        onChange={e => {
-          if (e.target.value === 'on') setViewMode(viewModes.DEVANAGARI_ONLY)
-        }}
-      />
-      <label htmlFor='devanagari-only'>Devanāgarī</label>
-    </div>
-  </>
-)
+  );
+};

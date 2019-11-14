@@ -16,9 +16,9 @@ const LearnLettersGuidance = () => (
     You can challenge yourself by pressing the keys on the keyboard to view
     individual letters.
     <br />
-    der goes in the following sequence: 123456789qwertyuiopasdfghjklzxcvbnm.
+    The order goes in the following sequence: 123456789qwertyuiopasdfghjklzxcvbnm.
     <br />
-    ng the spacebar displays transliteration when viewing one letter.
+    Pressing the spacebar displays transliteration when viewing one letter.
   </div>
 )
 
