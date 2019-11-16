@@ -28,16 +28,16 @@ const Header = ({ location }) => {
           <p>Learn Letters</p>
         </Link>
         <Link
-          to='read-simple-words'
+          to='read-simple-syllables'
           id='step-2'
           className={
-            selectedPage === 'read-simple-words'
+            selectedPage === 'read-simple-syllables'
               ? 'number-orange'
               : 'number-green'
           }
           style={{ backgroundPosition: '-79px 0' }}
         >
-          <p>Test Simple Syllables</p>
+          <p>Read Simple Syllables</p>
         </Link>
         <Link
           to='learn-contracted-vowels'
@@ -52,16 +52,16 @@ const Header = ({ location }) => {
           <p>Lean Contracted Vowels</p>
         </Link>
         <Link
-          to='test-simple-words'
+          to='read-simple-words'
           id='step-4'
           className={
-            selectedPage === 'test-simple-words'
+            selectedPage === 'read-simple-words'
               ? 'number-orange'
               : 'number-green'
           }
           style={{ backgroundPosition: '-285px 0' }}
         >
-          <p>Test Simple Words</p>
+          <p>Read Simple Words</p>
         </Link>
         <Link
           to='learn-conjuncts'
@@ -76,14 +76,14 @@ const Header = ({ location }) => {
           <p>Learn Conjuncts</p>
         </Link>
         <Link
-          to='test-all-words'
+          to='read-all-words'
           id='step-6'
           className={
-            selectedPage === 'test-all-words' ? 'number-orange' : 'number-green'
+            selectedPage === 'read-all-words' ? 'number-orange' : 'number-green'
           }
           style={{ backgroundPosition: '-492px 0' }}
         >
-          <p>Test Words with Conjuncts</p>
+          <p>Read Words with Conjuncts</p>
         </Link>
         <Link
           to='write-your-own'
