@@ -1,9 +1,9 @@
-import React, { useState, useEffect } from "react"
-import ReadWordsExtraOptions from "./ReadWordsExtraOptions"
-import * as extraOptions from "../lib/extraOptions"
-import * as viewModes from "../lib/viewModes"
-import ReadWordsGuidance from "./ReadWordsGuidance"
-import transliterate from "../utils/transliterate"
+import React, { useState, useEffect } from 'react'
+import ReadWordsExtraOptions from './ReadWordsExtraOptions'
+import * as extraOptions from '../lib/extraOptions'
+import * as viewModes from '../lib/viewModes'
+import ReadWordsGuidance from './ReadWordsGuidance'
+import transliterate from '../utils/transliterate'
 
 const ReadSingleWord = ({
   word,
@@ -30,7 +30,7 @@ export default readList => {
 
   useEffect(() => {
     if (!selectedWord) return
-    console.log("selected word is, ", selectedWord)
+    console.log('selected word is, ', selectedWord)
   }, [selectedWord])
 
   return (
