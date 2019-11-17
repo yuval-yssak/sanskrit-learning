@@ -3,6 +3,7 @@ import ReadWordsExtraOptions from './ReadWordsExtraOptions'
 import * as extraOptions from '../lib/extraOptions'
 import * as viewModes from '../lib/viewModes'
 import ReadWordsGuidance from './ReadWordsGuidance'
+import transliterate from '../utils/transliterate'
 
 const ReadSingleWord = ({
   word,
@@ -13,7 +14,7 @@ const ReadSingleWord = ({
     <div id='single-word'>
       <div>
         {
-          word[0] /* TODO: transliterate here to Devanagari according to viewmode */
+          transliterate(word[0])
         }
       </div>
     </div>
@@ -57,7 +58,7 @@ export default readList => {
             {readList.map(word => (
               <li key={word[0]} onClick={e => setSelectedWord(word)}>
                 {viewMode === viewModes.DEVANAGARI_ONLY
-                  ? 'transliterated ' + word[0]
+                  ?  transliterate(word[0])
                   : word[0]}
               </li>
             ))}
