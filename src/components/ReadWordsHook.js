@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react'
 import ReadWordsExtraOptions from './ReadWordsExtraOptions'
-import * as extraOptions from '../lib/extraOptions'
 import * as viewModes from '../lib/viewModes'
 import ReadWordsGuidance from './ReadWordsGuidance'
 import transliterate from '../utils/transliterate'
@@ -10,12 +9,12 @@ const ReadSingleWord = ({
   extraOptionTranslation,
   extraOptionTransliteration
 }) => (
-  <div id="main-block">
-    <div id="single-word">
+  <div id='main-block'>
+    <div id='single-word'>
       <div>{transliterate(word[0])}</div>
     </div>
-    {!!extraOptionTranslation && <div id="translation">{word[1]}</div>}
-    {!!extraOptionTransliteration && <div id="transliteration">{word[0]}</div>}
+    {!!extraOptionTranslation && <div id='translation'>{word[1]}</div>}
+    {!!extraOptionTransliteration && <div id='transliteration'>{word[0]}</div>}
   </div>
 )
 export default readList => {
@@ -45,11 +44,11 @@ export default readList => {
         viewMode={viewMode}
         setViewMode={setViewMode}
       />
-      <div id="guidance" className="ui-widget">
+      <div id='guidance' className='ui-widget'>
         <ReadWordsGuidance />
       </div>
-      <div id="main-portion">
-        <div id="word-list">
+      <div id='main-portion'>
+        <div id='word-list'>
           <ul>
             {readList.map(word => (
               <li key={word[0]} onClick={e => setSelectedWord(word)}>

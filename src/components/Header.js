@@ -4,6 +4,10 @@ import { Link, withRouter } from 'react-router-dom'
 const Header = ({ location }) => {
   const selectedPage = location.pathname.slice(1)
 
+  function classNameForSelectedPage(aPage) {
+    return selectedPage === aPage ? 'number-orange' : 'number-green'
+  }
+
   return (
     <>
       <div id='header-banner'>
@@ -20,9 +24,7 @@ const Header = ({ location }) => {
         <Link
           to='/learn-letters'
           id='step-1'
-          className={
-            selectedPage === 'learn-letters' ? 'number-orange' : 'number-green'
-          }
+          className={classNameForSelectedPage('learn-letters')}
           style={{ backgroundPosition: '24px 0px' }}
         >
           <p>Learn Letters</p>
@@ -30,11 +32,7 @@ const Header = ({ location }) => {
         <Link
           to='read-simple-syllables'
           id='step-2'
-          className={
-            selectedPage === 'read-simple-syllables'
-              ? 'number-orange'
-              : 'number-green'
-          }
+          className={classNameForSelectedPage('read-simple-syllables')}
           style={{ backgroundPosition: '-79px 0' }}
         >
           <p>Read Simple Syllables</p>
@@ -42,23 +40,15 @@ const Header = ({ location }) => {
         <Link
           to='learn-contracted-vowels'
           id='step-3'
-          className={
-            selectedPage === 'learn-contracted-vowels'
-              ? 'number-orange'
-              : 'number-green'
-          }
+          className={classNameForSelectedPage('learn-contracted-vowels')}
           style={{ backgroundPosition: '-182px 0' }}
         >
           <p>Lean Contracted Vowels</p>
         </Link>
         <Link
-          to='read-simple-words'
+          to='read-contracted-vowels'
           id='step-4'
-          className={
-            selectedPage === 'read-simple-words'
-              ? 'number-orange'
-              : 'number-green'
-          }
+          className={classNameForSelectedPage('read-contracted-vowels')}
           style={{ backgroundPosition: '-285px 0' }}
         >
           <p>Read Simple Words</p>
@@ -66,11 +56,7 @@ const Header = ({ location }) => {
         <Link
           to='learn-conjuncts'
           id='step-5'
-          className={
-            selectedPage === 'learn-conjuncts'
-              ? 'number-orange'
-              : 'number-green'
-          }
+          className={classNameForSelectedPage('learn-conjuncts')}
           style={{ backgroundPosition: '-388px 0' }}
         >
           <p>Learn Conjuncts</p>
@@ -78,9 +64,7 @@ const Header = ({ location }) => {
         <Link
           to='read-all-words'
           id='step-6'
-          className={
-            selectedPage === 'read-all-words' ? 'number-orange' : 'number-green'
-          }
+          className={classNameForSelectedPage('read-all-words')}
           style={{ backgroundPosition: '-492px 0' }}
         >
           <p>Read Words with Conjuncts</p>
@@ -88,9 +72,7 @@ const Header = ({ location }) => {
         <Link
           to='write-your-own'
           id='step-7'
-          className={
-            selectedPage === 'write-your-own' ? 'number-orange' : 'number-green'
-          }
+          className={classNameForSelectedPage('write-your-own')}
           style={{ backgroundPosition: '-595px 0' }}
         >
           <p>Write Your Own Words</p>

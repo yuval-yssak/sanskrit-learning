@@ -1,10 +1,9 @@
 import React, { useState } from 'react'
-import {
-  vowels,
-  lettersTransliterationMap
-} from '../lib/basicLetters'
+import { vowels } from '../lib/basicLetters'
 import * as viewModes from '../lib/viewModes'
 import LearnLettersNavigation from './LearnLettersNavigation'
+import LettersGrid from './LettersGrid'
+import LettersGridViewOptions from './LettersGridViewOptions'
 
 const LearnLettersGuidance = () => (
   <div>
@@ -16,34 +15,10 @@ const LearnLettersGuidance = () => (
     You can challenge yourself by pressing the keys on the keyboard to view
     individual letters.
     <br />
-    The order goes in the following sequence: 123456789qwertyuiopasdfghjklzxcvbnm.
+    The order goes in the following sequence:
+    123456789qwertyuiopasdfghjklzxcvbnm.
     <br />
     Pressing the spacebar displays transliteration when viewing one letter.
-  </div>
-)
-
-const Letters = ({ group, viewMode }) => (
-  <div className='letters-group'>
-    {group &&
-      group.map(letter => (
-        <div id={letter} key={letter} style={{ width: '129px' }}>
-          {viewMode === viewModes.DEVANAGARI_ONLY &&
-            lettersTransliterationMap()[letter]}
-          {viewMode === viewModes.DEVANAGARI_WITH_IAST && (
-            <>
-              {lettersTransliterationMap()[letter]}
-              {<div>{letter}</div>}
-            </>
-          )}
-          {viewMode === viewModes.IAST_ONLY && letter}
-          {viewMode === viewModes.IAST_WITH_DEVANAGARI && (
-            <>
-              {<div>{letter}</div>}
-              {lettersTransliterationMap()[letter]}
-            </>
-          )}
-        </div>
-      ))}
   </div>
 )
 
@@ -53,17 +28,15 @@ export default () => {
 
   return (
     <>
-      <LearnLettersNavigation
-        setSelectedGroup={setSelectedGroup}
-        setViewMode={setViewMode}
-      />
+      <LearnLettersNavigation setSelectedGroup={setSelectedGroup} />
+      <LettersGridViewOptions setViewMode={setViewMode} />
 
       <div id='guidance' className='ui-widget'>
         <LearnLettersGuidance />
       </div>
       <div id='main-portion'>
         <div id='main-block'>
-          <Letters group={selectedGroup} viewMode={viewMode} />
+          <LettersGrid group={selectedGroup} viewMode={viewMode} />
           <div className='letters-group'></div>
           <div id='individual-letter'></div>
           <input type='text' style={{ color: 'white' }}></input>

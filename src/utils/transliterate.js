@@ -7,19 +7,18 @@ let handleState,
   allOthers,
   allLetters
 
-
 export default function(source) {
-  let transliteration = ""
+  let transliteration = ''
   let currentLetter
   position = 0
   handleState = handleState0
   currentLetter = getNextLetter(source)
-  while (currentLetter !== "") {
+  while (currentLetter !== '') {
     transliteration += handleState(currentLetter)
     currentLetter = getNextLetter(source)
   }
   if (handleState === handleState1) {
-    transliteration += "्"
+    transliteration += '्'
   }
   return transliteration
 }
@@ -40,10 +39,10 @@ function handleState1(currentLetter) {
     handleState = handleState0
     return transliterateContractedVowel(currentLetter)
   } else if (isNonVowel(currentLetter)) {
-    return "्" + transliterateLetter(currentLetter)
+    return '्' + transliterateLetter(currentLetter)
   } else {
     handleState = handleState0
-    return "्" + currentLetter
+    return '्' + currentLetter
   }
 }
 
@@ -52,10 +51,10 @@ export function getNextLetter(source) {
   if (
     (isVowel(letter) &&
       isVowel(source.charAt(position + 1)) &&
-      source.charAt(position + 1) !== "ṃ" &&
-      source.charAt(position + 1) !== "ḥ") ||
+      source.charAt(position + 1) !== 'ṃ' &&
+      source.charAt(position + 1) !== 'ḥ') ||
     (isNonVowel(letter) &&
-      source.charAt(position + 1) === "h" &&
+      source.charAt(position + 1) === 'h' &&
       letter !== "'")
   ) {
     position++
@@ -80,14 +79,14 @@ function isNonVowel(letter) {
 
 function transliterateLetter(letter) {
   if (isNonVowel(letter) && letter !== "'") {
-    letter += "a"
+    letter += 'a'
   }
   for (var i = 0; i < getAllLetters().length; i++) {
     if (Object.keys(getAllLetters()[i])[0] === letter) {
       return getAllLetters()[i][letter]
     }
   }
-  return ""
+  return ''
 }
 
 function transliterateContractedVowel(letter) {
@@ -96,41 +95,41 @@ function transliterateContractedVowel(letter) {
       return getContractedVowels()[i][letter]
     }
   }
-  return ""
+  return ''
 }
 
 function getVowels() {
   if (allVowels === undefined) {
     var vowels = []
-    vowels.push({ a: "अ" })
-    vowels.push({ ā: "आ" })
-    vowels.push({ i: "इ" })
-    vowels.push({ ī: "ई" })
-    vowels.push({ u: "उ" })
-    vowels.push({ ū: "ऊ" })
-    vowels.push({ ṛ: "ऋ" })
-    vowels.push({ ṝ: "ॠ" })
-    vowels.push({ ḷ: "ऌ" })
-    vowels.push({ ḹ: "ॡ" })
-    vowels.push({ e: "ए" })
-    vowels.push({ ai: "ऐ" })
-    vowels.push({ o: "ओ" })
-    vowels.push({ au: "औ" })
-    vowels.push({ ṃ: "ं" })
-    vowels.push({ ḥ: "ः" })
+    vowels.push({ a: 'अ' })
+    vowels.push({ ā: 'आ' })
+    vowels.push({ i: 'इ' })
+    vowels.push({ ī: 'ई' })
+    vowels.push({ u: 'उ' })
+    vowels.push({ ū: 'ऊ' })
+    vowels.push({ ṛ: 'ऋ' })
+    vowels.push({ ṝ: 'ॠ' })
+    vowels.push({ ḷ: 'ऌ' })
+    vowels.push({ ḹ: 'ॡ' })
+    vowels.push({ e: 'ए' })
+    vowels.push({ ai: 'ऐ' })
+    vowels.push({ o: 'ओ' })
+    vowels.push({ au: 'औ' })
+    vowels.push({ ṃ: 'ं' })
+    vowels.push({ ḥ: 'ः' })
     allVowels = vowels
   }
   return allVowels
 }
 
 function isLetter(letter) {
-  if (letter === "") {
+  if (letter === '') {
     return false
   }
   for (var i = 0; i < getAllLetters().length; i++) {
     if (
       Object.keys(getAllLetters()[i])[0] === letter ||
-      Object.keys(getAllLetters()[i])[0] === letter + "a"
+      Object.keys(getAllLetters()[i])[0] === letter + 'a'
     ) {
       return true
     }
@@ -155,31 +154,31 @@ function getAllLetters() {
 function getConsonants() {
   if (allConsonants === undefined) {
     var consonants = []
-    consonants.push({ ka: "क" })
-    consonants.push({ kha: "ख" })
-    consonants.push({ ga: "ग" })
-    consonants.push({ gha: "घ" })
-    consonants.push({ ṅa: "ङ" })
-    consonants.push({ ca: "च" })
-    consonants.push({ cha: "छ" })
-    consonants.push({ ja: "ज" })
-    consonants.push({ jha: "झ" })
-    consonants.push({ ña: "ञ" })
-    consonants.push({ ṭa: "ट" })
-    consonants.push({ ṭha: "ठ" })
-    consonants.push({ ḍa: "ड" })
-    consonants.push({ ḍha: "ढ" })
-    consonants.push({ ṇa: "ण" })
-    consonants.push({ ta: "त" })
-    consonants.push({ tha: "थ" })
-    consonants.push({ da: "द" })
-    consonants.push({ dha: "ध" })
-    consonants.push({ na: "न" })
-    consonants.push({ pa: "प" })
-    consonants.push({ pha: "फ" })
-    consonants.push({ ba: "ब" })
-    consonants.push({ bha: "भ" })
-    consonants.push({ ma: "म" })
+    consonants.push({ ka: 'क' })
+    consonants.push({ kha: 'ख' })
+    consonants.push({ ga: 'ग' })
+    consonants.push({ gha: 'घ' })
+    consonants.push({ ṅa: 'ङ' })
+    consonants.push({ ca: 'च' })
+    consonants.push({ cha: 'छ' })
+    consonants.push({ ja: 'ज' })
+    consonants.push({ jha: 'झ' })
+    consonants.push({ ña: 'ञ' })
+    consonants.push({ ṭa: 'ट' })
+    consonants.push({ ṭha: 'ठ' })
+    consonants.push({ ḍa: 'ड' })
+    consonants.push({ ḍha: 'ढ' })
+    consonants.push({ ṇa: 'ण' })
+    consonants.push({ ta: 'त' })
+    consonants.push({ tha: 'थ' })
+    consonants.push({ da: 'द' })
+    consonants.push({ dha: 'ध' })
+    consonants.push({ na: 'न' })
+    consonants.push({ pa: 'प' })
+    consonants.push({ pha: 'फ' })
+    consonants.push({ ba: 'ब' })
+    consonants.push({ bha: 'भ' })
+    consonants.push({ ma: 'म' })
     allConsonants = consonants
   }
   return allConsonants
@@ -188,10 +187,10 @@ function getConsonants() {
 function getSemiVowels() {
   if (allSemiVowels === undefined) {
     var semiVowels = []
-    semiVowels.push({ ya: "य" })
-    semiVowels.push({ ra: "र" })
-    semiVowels.push({ la: "ल" })
-    semiVowels.push({ va: "व" })
+    semiVowels.push({ ya: 'य' })
+    semiVowels.push({ ra: 'र' })
+    semiVowels.push({ la: 'ल' })
+    semiVowels.push({ va: 'व' })
     allSemiVowels = semiVowels
   }
   return allSemiVowels
@@ -200,9 +199,9 @@ function getSemiVowels() {
 function getSibilants() {
   if (allSibilants === undefined) {
     var sibilants = []
-    sibilants.push({ śa: "श" })
-    sibilants.push({ ṣa: "ष" })
-    sibilants.push({ sa: "स" })
+    sibilants.push({ śa: 'श' })
+    sibilants.push({ ṣa: 'ष' })
+    sibilants.push({ sa: 'स' })
     allSibilants = sibilants
   }
   return allSibilants
@@ -211,10 +210,10 @@ function getSibilants() {
 function getAspirateAndCompounds() {
   if (allOthers === undefined) {
     var letters = []
-    letters.push({ ha: "ह" })
-    letters.push({ jña: "ज्ञ" })
-    letters.push({ tra: "त्र" })
-    letters.push({ kṣa: "क्ष" })
+    letters.push({ ha: 'ह' })
+    letters.push({ jña: 'ज्ञ' })
+    letters.push({ tra: 'त्र' })
+    letters.push({ kṣa: 'क्ष' })
     allOthers = letters
   }
   return allOthers
@@ -222,28 +221,28 @@ function getAspirateAndCompounds() {
 
 function getAvagraha() {
   var avagraha = []
-  avagraha.push({ "'": "ऽ" })
+  avagraha.push({ "'": 'ऽ' })
   return avagraha
 }
 
 function getContractedVowels() {
   var contractedVowels = []
-  contractedVowels.push({ "": "्" })
-  contractedVowels.push({ a: "" })
-  contractedVowels.push({ ā: "ा" })
-  contractedVowels.push({ i: "ि" })
-  contractedVowels.push({ ī: "ी" })
-  contractedVowels.push({ u: "ु" })
-  contractedVowels.push({ ū: "ू" })
-  contractedVowels.push({ ṛ: "ृ" })
-  contractedVowels.push({ ṝ: "ॄ" })
-  contractedVowels.push({ ḷ: "ॢ" })
-  contractedVowels.push({ ḹ: "ॣ" })
-  contractedVowels.push({ e: "े" })
-  contractedVowels.push({ ai: "ै" })
-  contractedVowels.push({ o: "ो" })
-  contractedVowels.push({ au: "ौ" })
-  contractedVowels.push({ ṃ: "ं" })
-  contractedVowels.push({ ḥ: "ः" })
+  contractedVowels.push({ '': '्' })
+  contractedVowels.push({ a: '' })
+  contractedVowels.push({ ā: 'ा' })
+  contractedVowels.push({ i: 'ि' })
+  contractedVowels.push({ ī: 'ी' })
+  contractedVowels.push({ u: 'ु' })
+  contractedVowels.push({ ū: 'ू' })
+  contractedVowels.push({ ṛ: 'ृ' })
+  contractedVowels.push({ ṝ: 'ॄ' })
+  contractedVowels.push({ ḷ: 'ॢ' })
+  contractedVowels.push({ ḹ: 'ॣ' })
+  contractedVowels.push({ e: 'े' })
+  contractedVowels.push({ ai: 'ै' })
+  contractedVowels.push({ o: 'ो' })
+  contractedVowels.push({ au: 'ौ' })
+  contractedVowels.push({ ṃ: 'ं' })
+  contractedVowels.push({ ḥ: 'ः' })
   return contractedVowels
 }
