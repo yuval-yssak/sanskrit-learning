@@ -1,8 +1,9 @@
 body {
   font-size: 11px;
-  height:100%;
+  height: 100%;
   font-family: "Lohit Devanagari";
 }
+
 #main-menu {
   list-style-type: none;
   background-color: AliceBlue;
@@ -21,21 +22,22 @@ body {
 }
 
 div#header {
-   font-size:inherit;
+  font-size: inherit;
 }
 
 .letters-group div {
-   font-size: 65px;   
-   display:inline-block;
-   text-align: right;
-   color: #005672;
+  font-size: 65px;
+  display: inline-block;
+  text-align: right;
+  color: #005672;
 }
 
-#single-word div, #individual-letter {
-   margin-bottom: 30px;
-   font-size: 120px;
-   line-height: 130%;
-   color: #005672;
+#single-word div,
+#individual-letter {
+  margin-bottom: 30px;
+  font-size: 120px;
+  line-height: 130%;
+  color: #005672;
 }
 
 #individual-letter {
@@ -48,40 +50,41 @@ div#header {
 }
 
 #individual-letter div {
-   display: inline-block;
+  display: inline-block;
 }
 
 .letters-group div:hover {
-   color:#f68814;
-   font-weight:bold;
+  color: #f68814;
+  font-weight: bold;
 }
 
 .mosaic {
   background-color: grey;
-  margin:5px;
+  margin: 5px;
 }
 
 .hidden {
-  color:grey;
+  color: grey;
 }
 
 div.transliteration {
-  color:#56a4a1;
+  color: #56a4a1;
   font-size: 30%;
   display: inline;
 }
 
 #vowels-for-consonant div {
-  display:inline-block;
-  width:20%;
+  display: inline-block;
+  width: 20%;
 }
 
 #vowels-for-consonant div:hover {
-   color:blue;
-   font-weight:bold;
+  color: blue;
+  font-weight: bold;
 }
+
 #vowels-for-consonant div div {
-  display:inline;
+  display: inline;
 }
 
 
@@ -102,8 +105,7 @@ div.transliteration {
   cursor: pointer;
   width: 250px;
   position: absolute;
-  top: 0;
-  bottom: 0;
+  margin-top: 50px;
 }
 
 #guidance div {
@@ -120,30 +122,31 @@ div.transliteration {
   background: PapayaWhip;
 }
 
-#word-list, #word-list-handle {
-  #position:fixed;
-  #left:0;
-  #height:100%;
-  #top:0px;
-  #vertical-align:top;
+#word-list,
+#word-list-handle {
+  #position: fixed;
+  #left: 0;
+  #height: 100%;
+  #top: 0px;
+  #vertical-align: top;
 }
 
 #word-list {
-  width:180px;
-  border-right:1px solid #800;
-  color:black;
-  background-color:#eee;
+  width: 180px;
+  border-right: 1px solid #800;
+  color: black;
+  background-color: #eee;
   display: none;
   overflow-x: hidden;
   overflow-y: scroll;
 }
 
 #word-list-handle {
-  width:5px;
-  background-color:#800;
+  width: 5px;
+  background-color: #800;
   color: #800;
-  padding:0;
-  border-right:1.3em solid white;
+  padding: 0;
+  border-right: 1.3em solid white;
 }
 
 div#word-list {
@@ -153,7 +156,7 @@ div#word-list {
 }
 
 div#word-list-toggle {
-  background-color:darkGray;
+  background-color: darkGray;
   text-align: center;
   vertical-align: middle;
   width: 40px;
@@ -171,7 +174,7 @@ div#word-list ul {
 div#word-list ul li {
   display: block;
   box-shadow: 1px 1px 2px rgba(0, 0, 155, 0.21);
-  background-image: url("images/little_arrow.PNG");
+  background-image: url("/images/little_arrow.PNG");
   background-position: 148px 4px;
   background-repeat: no-repeat;
 }
@@ -194,7 +197,10 @@ div#main-block {
   color: white;
 }
 
-#view-options, #extra-options, #letter-categories, #show-state {
+#view-options,
+#extra-options,
+#letter-categories,
+#show-state {
   margin-top: 10px;
   display: inline-block;
 }
@@ -204,8 +210,8 @@ div#main-block {
 }
 
 #equations {
-   font-size: 45px;   
-   color: #005672;
+  font-size: 45px;
+  color: #005672;
 }
 
 #equations div {
@@ -230,11 +236,11 @@ div#word-navigation button {
 }
 
 div#word-navigation button#navigate-prev {
-  background-image: url("images/button_previous.PNG");
+  background-image: url("/images/button_previous.PNG");
 }
 
 div#word-navigation button#navigate-next {
-  background-image: url("images/button_next.PNG");
+  background-image: url("/images/button_next.PNG");
 }
 
 div#translation {
@@ -251,16 +257,16 @@ div#transliteration {
 
 div#transliteration div {
   display: inline-block;
-  margin-right: 20px; 
+  margin-right: 20px;
 }
 
 div#transliteration div:hover {
-  color:darkGreen;
+  color: darkGreen;
 }
 
 .transliteration-syllable {
   display: inline;
-  color:#4c9f9b;
+  color: #4c9f9b;
 }
 
 div#write-inputs {
@@ -269,47 +275,50 @@ div#write-inputs {
 }
 
 div#header-banner {
-  background-color:#8cd9e3;
+  background-color: #8cd9e3;
   width: 1179px;
 }
+
 div#write-inputs input#new-word {
   width: 50%;
-  margin-top:20px;
-  margin-bottom:40px;
-  color:white;
+  margin-top: 20px;
+  margin-bottom: 40px;
+  color: white;
 }
 
 .number-green {
   vertical-align: middle;
   margin: 0 4px;
-  background-image: url("images/seven_steps_green.PNG");
+  background-image: url("/images/seven_steps_green.PNG");
   height: 41px;
   width: 90px;
   background-repeat: no-repeat;
-  display:inline-block;
+  display: inline-block;
   text-decoration: none;
-  position:relative;
+  position: relative;
   top: -14px;
 }
 
 .number-orange {
   vertical-align: middle;
   margin: 0 4px;
-  background-image: url("images/seven_steps_orange.PNG");
+  background-image: url("/images/seven_steps_orange.PNG");
   height: 41px;
   width: 90px;
   background-repeat: no-repeat;
-  display:inline-block;
+  display: inline-block;
   text-decoration: none;
-  position:relative;
+  position: relative;
   top: -14px;
 }
 
-.number-orange:hover > p, .number-green:hover > p {
+.number-orange:hover>p,
+.number-green:hover>p {
   color: red;
-} 
+}
 
-.number-orange > p, .number-green > p {
+.number-orange>p,
+.number-green>p {
   text-align: center;
   position: relative;
   top: 30px;
@@ -318,7 +327,7 @@ div#write-inputs input#new-word {
 }
 
 #main-page {
-  position:relative;
+  position: relative;
   max-width: 1179px;
 }
 
