@@ -11,6 +11,7 @@ import ReadSimpleSyllables from './ReadSimpleSyllables'
 import ReadSimpleWords from './ReadSimpleWords'
 import ReadAllWords from './ReadAllWords'
 import LearnContractedVowels from './LearnContractedVowels'
+import WriteYourOwn from './WriteYourOwn'
 
 export default () => {
   return (
@@ -35,6 +36,9 @@ export default () => {
           </Route>
           <Route path='/read-all-words'>
             <ReadAllWords />
+          </Route>
+          <Route path='/write-your-own'>
+            <WriteYourOwn />
           </Route>
         </Switch>
       </div>
