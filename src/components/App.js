@@ -8,7 +8,7 @@ import {
 import Header from './Header'
 import LearnLetters from './LearnLetters'
 import ReadSimpleSyllables from './ReadSimpleSyllables'
-import ReadSimpleWords from './ReadSimpleWords'
+import ReadContractedVowels from './ReadContractedVowels'
 import ReadAllWords from './ReadAllWords'
 import LearnContractedVowels from './LearnContractedVowels'
 import WriteYourOwn from './WriteYourOwn'
@@ -25,14 +25,14 @@ export default () => {
           <Route path='/learn-letters'>
             <LearnLetters />
           </Route>
-          <Route path='/learn-contracted-vowels'>
-            <LearnContractedVowels />
-          </Route>
           <Route path='/read-simple-syllables'>
             <ReadSimpleSyllables />
           </Route>
-          <Route path='/read-simple-words'>
-            <ReadSimpleWords />
+          <Route path='/learn-contracted-vowels'>
+            <LearnContractedVowels />
+          </Route>
+          <Route path='/read-contracted-vowels'>
+            <ReadContractedVowels />
           </Route>
           <Route path='/read-all-words'>
             <ReadAllWords />

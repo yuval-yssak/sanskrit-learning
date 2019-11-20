@@ -51,7 +51,7 @@ const Header = ({ location }) => {
           className={classNameForSelectedPage('read-contracted-vowels')}
           style={{ backgroundPosition: '-285px 0' }}
         >
-          <p>Read Simple Words</p>
+          <p>Read Contracted Vowels</p>
         </Link>
         <Link
           to='learn-conjuncts'

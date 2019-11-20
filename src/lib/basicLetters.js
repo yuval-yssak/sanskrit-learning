@@ -1,4 +1,4 @@
-export const vowels = () => [
+const vowels = () => [
   'a',
   'ā',
   'i',
@@ -17,7 +17,7 @@ export const vowels = () => [
   'ḥ'
 ]
 
-export const consonants = () => [
+const consonants = () => [
   'ka',
   'kha',
   'ga',
@@ -45,19 +45,13 @@ export const consonants = () => [
   'ma'
 ]
 
-export const semiVowels = () => ['ya', 'ra', 'la', 'va']
+const semiVowels = () => ['ya', 'ra', 'la', 'va']
 
-export const sibilants = () => ['śa', 'ṣa', 'sa']
+const sibilants = () => ['śa', 'ṣa', 'sa']
 
-export const aspirateAndCompoundsAndAvagraha = () => [
-  'ha',
-  'jña',
-  'tra',
-  'kṣa',
-  "'"
-]
+const aspirateAndCompoundsAndAvagraha = () => ['ha', 'jña', 'tra', 'kṣa', "'"]
 
-export const lettersTransliterationMap = () => ({
+const lettersTransliterationMap = () => ({
   a: 'अ',
   ā: 'आ',
   i: 'इ',
@@ -112,3 +106,12 @@ export const lettersTransliterationMap = () => ({
   kṣa: 'क्ष',
   "'": 'ऽ'
 })
+
+export {
+  vowels,
+  consonants,
+  semiVowels,
+  sibilants,
+  aspirateAndCompoundsAndAvagraha,
+  lettersTransliterationMap
+}
