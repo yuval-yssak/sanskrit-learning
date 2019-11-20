@@ -36,7 +36,7 @@ const handleState0 = currentLetter => {
 const handleState1 = currentLetter => {
   if (isVowel(currentLetter)) {
     handleState = handleState0
-    return transliterateContractedVowel(currentLetter)
+    return contractedVowelsTransliterationMap()[currentLetter]
   } else if (isNonVowel(currentLetter)) {
     return VIRAMA_IN_DEVANAGARI + transliterateLetter(currentLetter)
   } else {
@@ -63,7 +63,7 @@ const getNextLetter = source => {
   return letter
 }
 
-const isVowel = letter => vowels().some(vowel => vowel === letter)
+const isVowel = letter => vowels().includes(letter)
 
 const isNonVowel = letter => isLetter(letter) && !isVowel(letter)
 
@@ -72,10 +72,6 @@ const transliterateLetter = letter => {
   return lettersTransliterationMap()[letter] || ''
 }
 
-const transliterateContractedVowel = letter =>
-  contractedVowelsTransliterationMap()[letter]
-
 const isLetter = letter =>
-  Object.keys(lettersTransliterationMap()).find(
-    basicLetter => basicLetter === letter || basicLetter === letter + 'a'
-  )
+  Object.keys(lettersTransliterationMap()).includes(letter) ||
+  Object.keys(lettersTransliterationMap()).includes(letter + 'a')
