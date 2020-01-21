@@ -28,9 +28,12 @@ export default function BasicTextFields() {
   const handleIASTInputChange = e => {
     const { value } = e.target
     if (
-      // TODO: create better validation rules to rule out inputs such as "uuu", "iii", "ḥḥ"
+      // input validation
       value.match(/^[abcdeghijklmnoprstuvyāīūṛṝḷḹṃḥñṭṭḍḍṇṅśṣ'0-9 ]*$/) &&
-      !value.match(/[aāiīuūṛṝḷḹeoṃḥ][aāīūṛṝḷḹeo]/)
+      !value.match(/[aāiīuūṛṝḷḹeoṃḥ][aāīūṛṝḷḹeo]/) &&
+      !value.match(
+        /a{2,}|ā{2,}|i{2,}|ī{2,}|u{2,}|ū{2,}|ṛ{2,}|ṝ{2,}|ḷ{2,}|ḹ{2,}|e{2,}|o{2,}|ṃ{2,}|ḥ{2,}/
+      )
     )
       setInputValue(value)
   }
