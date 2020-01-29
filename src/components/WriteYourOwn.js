@@ -22,6 +22,7 @@ export default function BasicTextFields() {
   const [inputValue, setInputValue] = useState('')
   const [devanagariValue, setDevanagariValue] = useState('')
   const [hideIAST, setHideIAST] = useState(false)
+  const [hideDevanagari, setHideDevanagari] = useState(false)
 
   const classes = useStyles()
 
@@ -77,8 +78,22 @@ export default function BasicTextFields() {
           value={devanagariValue}
           margin="normal"
           InputProps={{ readOnly: true }}
-          inputProps={{ style: { fontSize: '4em' } }}
+          inputProps={{
+            style: { fontSize: '4em', color: hideDevanagari ? 'white' : 'inherit' }
+          }}
         />
+        <FormGroup row>
+          <FormControlLabel
+            control={
+              <Switch
+                checked={hideDevanagari}
+                onChange={e => setHideDevanagari(e.target.checked)}
+                color="primary"
+              />
+            }
+            label="Hide Devanagari"
+          />
+        </FormGroup>
       </div>
     </form>
   )
