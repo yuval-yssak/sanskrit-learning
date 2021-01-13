@@ -1,7 +1,7 @@
 body {
   font-size: 11px;
   height: 100%;
-  font-family: "Lohit Devanagari";
+  font-family: 'Lohit Devanagari';
 }
 
 #main-menu {
@@ -87,7 +87,6 @@ div.transliteration {
   display: inline;
 }
 
-
 .ui-buttonset label {
   margin-top: 0.3em;
 }
@@ -109,7 +108,7 @@ div.transliteration {
 }
 
 #guidance div {
-  padding: 0 .7em;
+  padding: 0 0.7em;
 }
 
 #guidance #guidance-head {
@@ -174,7 +173,7 @@ div#word-list ul {
 div#word-list ul li {
   display: block;
   box-shadow: 1px 1px 2px rgba(0, 0, 155, 0.21);
-  background-image: url("/images/little_arrow.PNG");
+  background-image: url(images/little_arrow.PNG);
   background-position: 148px 4px;
   background-repeat: no-repeat;
 }
@@ -236,11 +235,11 @@ div#word-navigation button {
 }
 
 div#word-navigation button#navigate-prev {
-  background-image: url("/images/button_previous.PNG");
+  background-image: url(images/button_previous.PNG);
 }
 
 div#word-navigation button#navigate-next {
-  background-image: url("/images/button_next.PNG");
+  background-image: url(images/button_next.PNG);
 }
 
 div#translation {
@@ -289,7 +288,7 @@ div#write-inputs input#new-word {
 .number-green {
   vertical-align: middle;
   margin: 0 4px;
-  background-image: url("/images/seven_steps_green.PNG");
+  background-image: url(images/seven_steps_green.PNG);
   height: 41px;
   width: 90px;
   background-repeat: no-repeat;
@@ -302,7 +301,7 @@ div#write-inputs input#new-word {
 .number-orange {
   vertical-align: middle;
   margin: 0 4px;
-  background-image: url("/images/seven_steps_orange.PNG");
+  background-image: url(images/seven_steps_orange.PNG);
   height: 41px;
   width: 90px;
   background-repeat: no-repeat;
@@ -312,13 +311,13 @@ div#write-inputs input#new-word {
   top: -14px;
 }
 
-.number-orange:hover>p,
-.number-green:hover>p {
+.number-orange:hover > p,
+.number-green:hover > p {
   color: red;
 }
 
-.number-orange>p,
-.number-green>p {
+.number-orange > p,
+.number-green > p {
   text-align: center;
   position: relative;
   top: 30px;
@@ -334,5 +333,5 @@ div#write-inputs input#new-word {
 #main-portion {
   margin-left: 250px;
   margin-top: 60px;
-  font-family: "Lohit Devanagari";
+  font-family: 'Lohit Devanagari';
 }
