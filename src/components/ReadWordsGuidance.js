@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default () => (
+const ReadWordsGuidance = () => (
   <div>
     <span id="guidance-head">Practice Reading and Writing words</span>
     <br />
@@ -13,3 +13,4 @@ export default () => (
     by choosing IAST and writing the Devanāgarī by yourself.
   </div>
 )
+export default ReadWordsGuidance

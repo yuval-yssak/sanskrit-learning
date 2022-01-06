@@ -13,7 +13,7 @@ import ReadAllWords from './ReadAllWords'
 import LearnContractedVowels from './LearnContractedVowels'
 import WriteYourOwn from './WriteYourOwn'
 
-export default () => {
+const App = () => {
   return (
     <Router>
       <Header />
@@ -45,3 +45,5 @@ export default () => {
     </Router>
   )
 }
+
+export default App

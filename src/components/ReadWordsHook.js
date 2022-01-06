@@ -17,7 +17,7 @@ const ReadSingleWord = ({
     {!!extraOptionTransliteration && <div id="transliteration">{word[0]}</div>}
   </div>
 )
-export default (readList) => {
+const ReadWordsHook = (readList) => {
   const [viewMode, setViewMode] = useState(viewModes.DEVANAGARI_ONLY)
   // TODO: Simplify state to one object with flags
   const [extraOptionBySyllables, setExtraOptionBySyllables] = useState(false)
@@ -69,3 +69,5 @@ export default (readList) => {
     </>
   )
 }
+
+export default ReadWordsHook

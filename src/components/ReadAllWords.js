@@ -1,8 +1,10 @@
 import allWordsList from '../lib/allWords.json'
 import useReadWords from './ReadWordsHook'
 
-export default () => {
+const A = () => {
   const renderReadWords = useReadWords(allWordsList)
 
   return renderReadWords
 }
+
+export default A

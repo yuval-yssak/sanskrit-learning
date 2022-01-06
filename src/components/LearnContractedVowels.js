@@ -4,7 +4,7 @@ import * as viewModes from '../lib/viewModes'
 import LettersGrid from './LettersGrid'
 import LettersGridViewOptions from './LettersGridViewOptions'
 
-export default () => {
+const LearnContractedVowels = () => {
   const [viewMode, setViewMode] = useState(viewModes.DEVANAGARI_WITH_IAST)
 
   return (
@@ -19,3 +19,5 @@ export default () => {
     </>
   )
 }
+
+export default LearnContractedVowels

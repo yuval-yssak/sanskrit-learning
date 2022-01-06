@@ -17,7 +17,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }))
 
-export default ({
+const ReadWordsExtraOptions = ({
   extraOptionBySyllables,
   setExtraOptionBySyllables,
   extraOptionTransliteration,
@@ -90,3 +90,5 @@ export default ({
     </div>
   )
 }
+
+export default ReadWordsExtraOptions

@@ -1,7 +1,7 @@
 import React from 'react'
 import * as viewModes from '../lib/viewModes'
 
-export default ({ setViewMode }) => (
+const LettersGridViewOptions = ({ setViewMode }) => (
   <div id="view-options">
     <label className="options-header">View Options: </label>
     <input
@@ -42,3 +42,5 @@ export default ({ setViewMode }) => (
     <label htmlFor="devanagari-with-iast">Devanāgarī with IAST</label>
   </div>
 )
+
+export default LettersGridViewOptions
