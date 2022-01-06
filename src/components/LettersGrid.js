@@ -11,31 +11,41 @@ const LettersGrid = ({ group = [], viewMode, contractedVowels = false }) => {
   return (
     <div className="letters-group">
       {group.map((letter) => (
-        <div id={letter} key={letter} style={{ width: '129px' }}>
-          {viewMode === viewModes.DEVANAGARI_ONLY && transliterationMap[letter]}
-          {viewMode === viewModes.DEVANAGARI_WITH_IAST && (
-            <>
-              {transliterationMap[letter]}
-              {
-                <div className="transliteration" style={{ width: '129px' }}>
-                  {letter}
-                </div>
-              }
-            </>
-          )}
-          {viewMode === viewModes.IAST_ONLY && letter}
-          {viewMode === viewModes.IAST_WITH_DEVANAGARI && (
-            <>
-              <div>{letter}</div>
-              <div className="transliteration" style={{ width: '129px' }}>
-                {transliterationMap[letter]}
-              </div>
-            </>
-          )}
-        </div>
+        <OneLetter
+          letter={letter}
+          viewMode={viewMode}
+          transliterationMap={transliterationMap}
+        />
       ))}
     </div>
   )
 }
 
 export default LettersGrid
+
+export function OneLetter({ letter, viewMode, transliterationMap }) {
+  return (
+    <div id={letter} key={letter} style={{ width: '129px' }}>
+      {viewMode === viewModes.DEVANAGARI_ONLY && transliterationMap[letter]}
+      {viewMode === viewModes.DEVANAGARI_WITH_IAST && (
+        <>
+          {transliterationMap[letter]}
+          {
+            <div className="transliteration" style={{ width: '129px' }}>
+              {letter}
+            </div>
+          }
+        </>
+      )}
+      {viewMode === viewModes.IAST_ONLY && letter}
+      {viewMode === viewModes.IAST_WITH_DEVANAGARI && (
+        <>
+          <div>{letter}</div>
+          <div className="transliteration" style={{ width: '129px' }}>
+            {transliterationMap[letter]}
+          </div>
+        </>
+      )}
+    </div>
+  )
+}

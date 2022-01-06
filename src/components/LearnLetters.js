@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
-import { vowels } from '../lib/basicLetters'
+import { lettersTransliterationMap, vowels } from '../lib/basicLetters'
 import * as viewModes from '../lib/viewModes'
 import LearnLettersNavigation from './LearnLettersNavigation'
-import LettersGrid from './LettersGrid'
+import LettersGrid, { OneLetter } from './LettersGrid'
 import LettersGridViewOptions from './LettersGridViewOptions'
 
 const LearnLettersGuidance = () => (
@@ -25,21 +25,43 @@ const LearnLettersGuidance = () => (
 const LearnLetters = () => {
   const [selectedGroup, setSelectedGroup] = useState(vowels)
   const [viewMode, setViewMode] = useState(viewModes.DEVANAGARI_WITH_IAST)
-
+  const [status, setStatus] = useState(null)
   return (
     <>
       <LearnLettersNavigation setSelectedGroup={setSelectedGroup} />
       <LettersGridViewOptions setViewMode={setViewMode} />
 
-      <div id="guidance" className="ui-widget">
+      <div
+        tabIndex={0}
+        onKeyUp={(e) => {
+          if (e.key === 'Escape') return setStatus(null)
+          const location = '123456789qwertyuiopasdfghjklzxcvbnm'
+            .split('')
+            .findIndex((a) => a === e.key)
+
+          if (location !== -1) setStatus(location)
+        }}
+        id="guidance"
+        className="ui-widget"
+      >
         <LearnLettersGuidance />
       </div>
       <div id="main-portion">
         <div id="main-block">
-          <LettersGrid group={selectedGroup} viewMode={viewMode} />
-          <div className="letters-group"></div>
-          <div id="individual-letter"></div>
-          <input type="text" style={{ color: 'white' }}></input>
+          {status === null ? (
+            <>
+              <LettersGrid group={selectedGroup} viewMode={viewMode} />
+              <div className="letters-group"></div>
+            </>
+          ) : (
+            <div id="individual-letter">
+              <OneLetter
+                letter={selectedGroup[status]}
+                viewMode={viewMode}
+                transliterationMap={lettersTransliterationMap()}
+              />
+            </div>
+          )}
         </div>
       </div>
     </>
