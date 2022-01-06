@@ -14,7 +14,7 @@ const vowels = () => [
   'o',
   'au',
   'ṃ',
-  'ḥ'
+  'ḥ',
 ]
 
 const consonants = () => [
@@ -42,7 +42,7 @@ const consonants = () => [
   'pha',
   'ba',
   'bha',
-  'ma'
+  'ma',
 ]
 
 const semiVowels = () => ['ya', 'ra', 'la', 'va']
@@ -104,7 +104,7 @@ const lettersTransliterationMap = () => ({
   jña: 'ज्ञ',
   tra: 'त्र',
   kṣa: 'क्ष',
-  "'": 'ऽ'
+  "'": 'ऽ',
 })
 
 export {
@@ -113,5 +113,5 @@ export {
   semiVowels,
   sibilants,
   aspirateAndCompoundsAndAvagraha,
-  lettersTransliterationMap
+  lettersTransliterationMap,
 }

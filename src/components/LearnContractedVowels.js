@@ -10,8 +10,8 @@ export default () => {
   return (
     <>
       <LettersGridViewOptions setViewMode={setViewMode} />
-      <div id='main-portion'>
-        <div id='main-block'>
+      <div id="main-portion">
+        <div id="main-block">
           <LettersGrid group={vowels()} viewMode={viewMode} contractedVowels />
         </div>
       </div>

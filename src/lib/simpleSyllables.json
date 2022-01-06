@@ -1,126 +1,33 @@
 [
-  [
-    "eka",
-    "1 - one"
-  ],
-  [
-    "ekaḥ",
-    "1 - one"
-  ],
-  [
-    "ekaṃ",
-    "1 - one"
-  ],
-  [
-    "kakaḥ",
-    "crow"
-  ],
-  [
-    "gaṃga",
-    "Ganges"
-  ],
-  [
-    "gajaḥ",
-    "elephant"
-  ],
-  [
-    "laya",
-    "dissolution"
-  ],
-  [
-    "phala",
-    "fruit"
-  ],
-  [
-    "āma",
-    "undigested food"
-  ],
-  [
-    "nava",
-    "9 - nine"
-  ],
-  [
-    "daśa",
-    "10 - ten"
-  ],
-  [
-    "navadaśa",
-    "19 - nineteen"
-  ],
-  [
-    "śata",
-    "100 - hundred"
-  ],
-  [
-    "lakṣa",
-    "100,000 - hundred-thousand"
-  ],
-  [
-    "bakaḥ",
-    "crane"
-  ],
-  [
-    "caṭakaḥ",
-    "sparrow"
-  ],
-  [
-    "maśakaḥ",
-    "mosquito"
-  ],
-  [
-    "ajaḥ",
-    "goat"
-  ],
-  [
-    "śaśaḥ",
-    "rabbit"
-  ],
-  [
-    "haṃsaḥ",
-    "swan"
-  ],
-  [
-    "alasaḥ",
-    "lazy"
-  ],
-  [
-    "analaḥ",
-    "fire"
-  ],
-  [
-    "kakṣaḥ",
-    "class"
-  ],
-  [
-    "ghaṭaḥ",
-    "pot"
-  ],
-  [
-    "daśanaḥ",
-    "tooth"
-  ],
-  [
-    "jaladaḥ",
-    "cloud"
-  ],
-  [
-    "janagaṇaḥ",
-    "community"
-  ],
-  [
-    "naraḥ",
-    "man"
-  ],
-  [
-    "pakṣaḥ",
-    "wing"
-  ],
-  [
-    "bhaṭaḥ",
-    "soldier"
-  ],
-  [
-    "rathaḥ",
-    "chariot"
-  ]
+  ["eka", "1 - one"],
+  ["ekaḥ", "1 - one"],
+  ["ekaṃ", "1 - one"],
+  ["kakaḥ", "crow"],
+  ["gaṃga", "Ganges"],
+  ["gajaḥ", "elephant"],
+  ["laya", "dissolution"],
+  ["phala", "fruit"],
+  ["āma", "undigested food"],
+  ["nava", "9 - nine"],
+  ["daśa", "10 - ten"],
+  ["navadaśa", "19 - nineteen"],
+  ["śata", "100 - hundred"],
+  ["lakṣa", "100,000 - hundred-thousand"],
+  ["bakaḥ", "crane"],
+  ["caṭakaḥ", "sparrow"],
+  ["maśakaḥ", "mosquito"],
+  ["ajaḥ", "goat"],
+  ["śaśaḥ", "rabbit"],
+  ["haṃsaḥ", "swan"],
+  ["alasaḥ", "lazy"],
+  ["analaḥ", "fire"],
+  ["kakṣaḥ", "class"],
+  ["ghaṭaḥ", "pot"],
+  ["daśanaḥ", "tooth"],
+  ["jaladaḥ", "cloud"],
+  ["janagaṇaḥ", "community"],
+  ["naraḥ", "man"],
+  ["pakṣaḥ", "wing"],
+  ["bhaṭaḥ", "soldier"],
+  ["rathaḥ", "chariot"]
 ]

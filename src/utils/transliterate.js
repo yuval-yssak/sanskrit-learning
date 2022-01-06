@@ -6,7 +6,7 @@ const AVAGRAHA_IN_IAST = "'"
 
 let handleState, position
 
-export default source => {
+const transliterate = (source) => {
   let transliteration = ''
   let currentLetter
   position = 0
@@ -22,7 +22,7 @@ export default source => {
   return transliteration
 }
 
-const handleState0 = currentLetter => {
+const handleState0 = (currentLetter) => {
   if (isVowel(currentLetter) || currentLetter === AVAGRAHA_IN_IAST) {
     return transliterateLetter(currentLetter)
   } else if (isNonVowel(currentLetter)) {
@@ -33,7 +33,7 @@ const handleState0 = currentLetter => {
   }
 }
 
-const handleState1 = currentLetter => {
+const handleState1 = (currentLetter) => {
   if (isVowel(currentLetter)) {
     handleState = handleState0
     return contractedVowelsTransliterationMap()[currentLetter]
@@ -45,7 +45,7 @@ const handleState1 = currentLetter => {
   }
 }
 
-const getNextLetter = source => {
+const getNextLetter = (source) => {
   let letter = source.charAt(position)
   if (
     (isVowel(letter) &&
@@ -63,15 +63,17 @@ const getNextLetter = source => {
   return letter
 }
 
-const isVowel = letter => vowels().includes(letter)
+const isVowel = (letter) => vowels().includes(letter)
 
-const isNonVowel = letter => isLetter(letter) && !isVowel(letter)
+const isNonVowel = (letter) => isLetter(letter) && !isVowel(letter)
 
-const transliterateLetter = letter => {
+const transliterateLetter = (letter) => {
   if (isNonVowel(letter) && letter !== AVAGRAHA_IN_IAST) letter += 'a'
   return lettersTransliterationMap()[letter] || ''
 }
 
-const isLetter = letter =>
+const isLetter = (letter) =>
   Object.keys(lettersTransliterationMap()).includes(letter) ||
   Object.keys(lettersTransliterationMap()).includes(letter + 'a')
+
+export default transliterate

@@ -3,21 +3,21 @@ import * as viewModes from '../lib/viewModes'
 import { lettersTransliterationMap } from '../lib/basicLetters'
 import { contractedVowelsTransliterationMap } from '../lib/contractedVowels'
 
-export default ({ group = [], viewMode, contractedVowels = false }) => {
+const LettersGrid = ({ group = [], viewMode, contractedVowels = false }) => {
   const transliterationMap = contractedVowels
     ? contractedVowelsTransliterationMap()
     : lettersTransliterationMap()
 
   return (
-    <div className='letters-group'>
-      {group.map(letter => (
+    <div className="letters-group">
+      {group.map((letter) => (
         <div id={letter} key={letter} style={{ width: '129px' }}>
           {viewMode === viewModes.DEVANAGARI_ONLY && transliterationMap[letter]}
           {viewMode === viewModes.DEVANAGARI_WITH_IAST && (
             <>
               {transliterationMap[letter]}
               {
-                <div className='transliteration' style={{ width: '129px' }}>
+                <div className="transliteration" style={{ width: '129px' }}>
                   {letter}
                 </div>
               }
@@ -27,7 +27,7 @@ export default ({ group = [], viewMode, contractedVowels = false }) => {
           {viewMode === viewModes.IAST_WITH_DEVANAGARI && (
             <>
               <div>{letter}</div>
-              <div className='transliteration' style={{ width: '129px' }}>
+              <div className="transliteration" style={{ width: '129px' }}>
                 {transliterationMap[letter]}
               </div>
             </>
@@ -37,3 +37,5 @@ export default ({ group = [], viewMode, contractedVowels = false }) => {
     </div>
   )
 }
+
+export default LettersGrid

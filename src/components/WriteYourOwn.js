@@ -6,16 +6,16 @@ import FormControlLabel from '@material-ui/core/FormControlLabel'
 import Switch from '@material-ui/core/Switch'
 import FormGroup from '@material-ui/core/FormGroup'
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles((theme) => ({
   container: {
     display: 'flex',
     flexDirection: 'column',
-    flexWrap: 'wrap'
+    flexWrap: 'wrap',
   },
   textField: {
     marginLeft: theme.spacing(1),
-    marginRight: theme.spacing(1)
-  }
+    marginRight: theme.spacing(1),
+  },
 }))
 
 export default function BasicTextFields() {
@@ -26,7 +26,7 @@ export default function BasicTextFields() {
 
   const classes = useStyles()
 
-  const handleIASTInputChange = e => {
+  const handleIASTInputChange = (e) => {
     const { value } = e.target
     if (
       // input validation
@@ -54,7 +54,7 @@ export default function BasicTextFields() {
           margin="normal"
           onChange={handleIASTInputChange}
           inputProps={{
-            style: { fontSize: '4em', color: hideIAST ? 'white' : 'inherit' }
+            style: { fontSize: '4em', color: hideIAST ? 'white' : 'inherit' },
           }}
         />
         <FormGroup row>
@@ -62,7 +62,7 @@ export default function BasicTextFields() {
             control={
               <Switch
                 checked={hideIAST}
-                onChange={e => setHideIAST(e.target.checked)}
+                onChange={(e) => setHideIAST(e.target.checked)}
                 color="primary"
               />
             }
@@ -79,7 +79,10 @@ export default function BasicTextFields() {
           margin="normal"
           InputProps={{ readOnly: true }}
           inputProps={{
-            style: { fontSize: '4em', color: hideDevanagari ? 'white' : 'inherit' }
+            style: {
+              fontSize: '4em',
+              color: hideDevanagari ? 'white' : 'inherit',
+            },
           }}
         />
         <FormGroup row>
@@ -87,7 +90,7 @@ export default function BasicTextFields() {
             control={
               <Switch
                 checked={hideDevanagari}
-                onChange={e => setHideDevanagari(e.target.checked)}
+                onChange={(e) => setHideDevanagari(e.target.checked)}
                 color="primary"
               />
             }

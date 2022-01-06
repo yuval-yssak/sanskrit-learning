@@ -7,7 +7,7 @@ import LettersGridViewOptions from './LettersGridViewOptions'
 
 const LearnLettersGuidance = () => (
   <div>
-    <span id='guidance-head'>Learn the Devanāgarī alphabet</span>
+    <span id="guidance-head">Learn the Devanāgarī alphabet</span>
     <br />
     Choose the letters groups you wish to learn and the view options, using the
     buttons above.
@@ -22,7 +22,7 @@ const LearnLettersGuidance = () => (
   </div>
 )
 
-export default () => {
+const LearnLetters = () => {
   const [selectedGroup, setSelectedGroup] = useState(vowels)
   const [viewMode, setViewMode] = useState(viewModes.DEVANAGARI_WITH_IAST)
 
@@ -31,17 +31,19 @@ export default () => {
       <LearnLettersNavigation setSelectedGroup={setSelectedGroup} />
       <LettersGridViewOptions setViewMode={setViewMode} />
 
-      <div id='guidance' className='ui-widget'>
+      <div id="guidance" className="ui-widget">
         <LearnLettersGuidance />
       </div>
-      <div id='main-portion'>
-        <div id='main-block'>
+      <div id="main-portion">
+        <div id="main-block">
           <LettersGrid group={selectedGroup} viewMode={viewMode} />
-          <div className='letters-group'></div>
-          <div id='individual-letter'></div>
-          <input type='text' style={{ color: 'white' }}></input>
+          <div className="letters-group"></div>
+          <div id="individual-letter"></div>
+          <input type="text" style={{ color: 'white' }}></input>
         </div>
       </div>
     </>
   )
 }
+
+export default LearnLetters

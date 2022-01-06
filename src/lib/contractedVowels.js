@@ -15,5 +15,5 @@ export const contractedVowelsTransliterationMap = () => ({
   o: 'ो',
   au: 'ौ',
   ṃ: 'ं',
-  ḥ: 'ः'
+  ḥ: 'ः',
 })

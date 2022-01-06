@@ -1,262 +1,67 @@
 [
-  [
-    "śambhala",
-    "name of a sacred land"
-  ],
-  [
-    "satya",
-    "truth"
-  ],
-  [
-    "skandha",
-    "attributes of character"
-  ],
-  [
-    "kalpa",
-    "cycle"
-  ],
-  [
-    "manvantara",
-    "age of manifestation"
-  ],
-  [
-    "sthūla",
-    "gross, bulky"
-  ],
-  [
-    "sandhyā",
-    "twilight"
-  ],
-  [
-    "kanyā",
-    "maiden"
-  ],
-  [
-    "saṃskṛta",
-    "sanskrit"
-  ],
-  [
-    "ātman",
-    "Self, soul"
-  ],
-  [
-    "kuṇḍalinī",
-    "serpent-power in spine"
-  ],
-  [
-    "nādavindu",
-    "name of an upaniṣad"
-  ],
-  [
-    "gacchāmi",
-    "I go"
-  ],
-  [
-    "guruparamparā",
-    "succession of teachers"
-  ],
-  [
-    "saccidānanda",
-    "existence-knowledge-bliss"
-  ],
-  [
-    "bṛhaspati",
-    "the guru of the devas"
-  ],
-  [
-    "ṛṣī",
-    "seer"
-  ],
-  [
-    "suṣumṇa nāḍī",
-    "the central prāṇic channel"
-  ],
-  [
-    "viṣṇu",
-    "Lord Nārāyana"
-  ],
-  [
-    "kṛṣṇa",
-    "The one who attracts"
-  ],
-  [
-    "suṣupti",
-    "deep sleep"
-  ],
-  [
-    "karma",
-    ""
-  ],
-  [
-    "dharma",
-    ""
-  ],
-  [
-    "śrī kṛṣṇa",
-    ""
-  ],
-  [
-    "śrīmadbhāgavatam",
-    "a name of a scripture"
-  ],
-  [
-    "ॐ śrīmahāgaṇapataye namaḥ",
-    ""
-  ],
-  [
-    "ॐ śrīrāmāya namaḥ",
-    ""
-  ],
-  [
-    "ॐ śrīdurgāyai namaḥ",
-    ""
-  ],
-  [
-    "ॐ śrīmahālakṣmyai namaḥ",
-    ""
-  ],
-  [
-    "ॐ aiṃ sarasvatyai namaḥ",
-    ""
-  ],
-  [
-    "ॐ tryambakaṃ yajāmahe sugandhiṃ puṣtivardhanam",
-    ""
-  ],
-  [
-    "urvārukamiva bandhanānmṛtyormukṣīya mā'mṛtāt",
-    ""
-  ],
-  [
-    "sarve bhavantu sukhinaḥ sarve santu nirāmayāḥ",
-    ""
-  ],
-  [
-    "sarve bhadrāṇi paśyantu mā kaścid-duḥkhabhāg-bhavet",
-    ""
-  ],
-  [
-    "ॐ asato mā sadgamaya",
-    ""
-  ],
-  [
-    "tamaso mā jyotirgamaya",
-    ""
-  ],
-  [
-    "mṛtyormā amṛtaṃ gamaya",
-    ""
-  ],
-  [
-    "ॐ pūrṇamadaḥ pūrṇamidaṃ pūrṇāt pūrṇamudacyate",
-    ""
-  ],
-  [
-    "pūrṇasya pūrṇamādāya pūrṇamevāvaśiṣyate",
-    ""
-  ],
-  [
-    "ॐ śāntiḥ śāntiḥ śāntiḥ",
-    ""
-  ],
-  [
-    "gajānanaṃ bhūtagaṇādisevitam",
-    ""
-  ],
-  [
-    "kapittha jambū phala sāra bhakṣitam",
-    ""
-  ],
-  [
-    "umāsutaṃ śokavināśakāraṇam",
-    ""
-  ],
-  [
-    "namāmi vighneśvarapādapaṅkajam",
-    ""
-  ],
-  [
-    "ṣaḍānanaṃ kuṅkuma raktavarṇam",
-    ""
-  ],
-  [
-    "mahāmatiṃ divyamayūravāhanam",
-    ""
-  ],
-  [
-    "rudrasyasūnuṃ surasainyanātham",
-    ""
-  ],
-  [
-    "guhaṃ sadāhaṃ śaraṇaṃ prapadye",
-    ""
-  ],
-  [
-    "yā kundendu tuṣārahāra dhavalā yā śubhra avastrāvṛtā",
-    ""
-  ],
-  [
-    "yā vīṇā vara daṇḍa maṇḍitakarā yā śveta padmāsanā",
-    ""
-  ],
-  [
-    "yā brahmācyuta śaṅkara prabhṛtibhir devaiḥ sadā pūjitā",
-    ""
-  ],
-  [
-    "sā māṃ pātu sarasvatī bhagavatī niśśeṣajāḍyāpahā",
-    ""
-  ],
-  [
-    "ॐ namaḥ śivāya gurave saccidānandamūrtaye",
-    ""
-  ],
-  [
-    "niṣprapañcāya śāntāya śrīśivānandaya te namaḥ",
-    ""
-  ],
-  [
-    "śrī viṣṇu devānandaya te namaḥ",
-    ""
-  ],
-  [
-    "ॐsarva maṅgalamāṅgalye śive sarvārthasādhike",
-    ""
-  ],
-  [
-    "śaraṇye trayambake gaurī nārāyaṇi namo'stute",
-    ""
-  ],
-  [
-    "nārāyaṇi namo'stute",
-    ""
-  ],
-  [
-    "iḍā nāḍī",
-    "the moon channel"
-  ],
-  [
-    "piṅgala nāḍī",
-    "the Sun channel"
-  ],
-  [
-    "cakra",
-    "a wheel"
-  ],
-  [
-    "mūlādhāra cakra",
-    "the base cakra"
-  ],
-  [
-    "maṇipūra cakra",
-    "the solar plexus cakra"
-  ],
-  [
-    "anāhata cakra",
-    "the heart cakra"
-  ],
-  [
-    "ajñā cakra",
-    "the third eye cakra"
-  ]
+  ["śambhala", "name of a sacred land"],
+  ["satya", "truth"],
+  ["skandha", "attributes of character"],
+  ["kalpa", "cycle"],
+  ["manvantara", "age of manifestation"],
+  ["sthūla", "gross, bulky"],
+  ["sandhyā", "twilight"],
+  ["kanyā", "maiden"],
+  ["saṃskṛta", "sanskrit"],
+  ["ātman", "Self, soul"],
+  ["kuṇḍalinī", "serpent-power in spine"],
+  ["nādavindu", "name of an upaniṣad"],
+  ["gacchāmi", "I go"],
+  ["guruparamparā", "succession of teachers"],
+  ["saccidānanda", "existence-knowledge-bliss"],
+  ["bṛhaspati", "the guru of the devas"],
+  ["ṛṣī", "seer"],
+  ["suṣumṇa nāḍī", "the central prāṇic channel"],
+  ["viṣṇu", "Lord Nārāyana"],
+  ["kṛṣṇa", "The one who attracts"],
+  ["suṣupti", "deep sleep"],
+  ["karma", ""],
+  ["dharma", ""],
+  ["śrī kṛṣṇa", ""],
+  ["śrīmadbhāgavatam", "a name of a scripture"],
+  ["ॐ śrīmahāgaṇapataye namaḥ", ""],
+  ["ॐ śrīrāmāya namaḥ", ""],
+  ["ॐ śrīdurgāyai namaḥ", ""],
+  ["ॐ śrīmahālakṣmyai namaḥ", ""],
+  ["ॐ aiṃ sarasvatyai namaḥ", ""],
+  ["ॐ tryambakaṃ yajāmahe sugandhiṃ puṣtivardhanam", ""],
+  ["urvārukamiva bandhanānmṛtyormukṣīya mā'mṛtāt", ""],
+  ["sarve bhavantu sukhinaḥ sarve santu nirāmayāḥ", ""],
+  ["sarve bhadrāṇi paśyantu mā kaścid-duḥkhabhāg-bhavet", ""],
+  ["ॐ asato mā sadgamaya", ""],
+  ["tamaso mā jyotirgamaya", ""],
+  ["mṛtyormā amṛtaṃ gamaya", ""],
+  ["ॐ pūrṇamadaḥ pūrṇamidaṃ pūrṇāt pūrṇamudacyate", ""],
+  ["pūrṇasya pūrṇamādāya pūrṇamevāvaśiṣyate", ""],
+  ["ॐ śāntiḥ śāntiḥ śāntiḥ", ""],
+  ["gajānanaṃ bhūtagaṇādisevitam", ""],
+  ["kapittha jambū phala sāra bhakṣitam", ""],
+  ["umāsutaṃ śokavināśakāraṇam", ""],
+  ["namāmi vighneśvarapādapaṅkajam", ""],
+  ["ṣaḍānanaṃ kuṅkuma raktavarṇam", ""],
+  ["mahāmatiṃ divyamayūravāhanam", ""],
+  ["rudrasyasūnuṃ surasainyanātham", ""],
+  ["guhaṃ sadāhaṃ śaraṇaṃ prapadye", ""],
+  ["yā kundendu tuṣārahāra dhavalā yā śubhra avastrāvṛtā", ""],
+  ["yā vīṇā vara daṇḍa maṇḍitakarā yā śveta padmāsanā", ""],
+  ["yā brahmācyuta śaṅkara prabhṛtibhir devaiḥ sadā pūjitā", ""],
+  ["sā māṃ pātu sarasvatī bhagavatī niśśeṣajāḍyāpahā", ""],
+  ["ॐ namaḥ śivāya gurave saccidānandamūrtaye", ""],
+  ["niṣprapañcāya śāntāya śrīśivānandaya te namaḥ", ""],
+  ["śrī viṣṇu devānandaya te namaḥ", ""],
+  ["ॐsarva maṅgalamāṅgalye śive sarvārthasādhike", ""],
+  ["śaraṇye trayambake gaurī nārāyaṇi namo'stute", ""],
+  ["nārāyaṇi namo'stute", ""],
+  ["iḍā nāḍī", "the moon channel"],
+  ["piṅgala nāḍī", "the Sun channel"],
+  ["cakra", "a wheel"],
+  ["mūlādhāra cakra", "the base cakra"],
+  ["maṇipūra cakra", "the solar plexus cakra"],
+  ["anāhata cakra", "the heart cakra"],
+  ["ajñā cakra", "the third eye cakra"]
 ]
