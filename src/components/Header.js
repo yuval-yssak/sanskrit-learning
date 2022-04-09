@@ -1,7 +1,8 @@
 import React from 'react'
-import { Link, withRouter } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 
-const Header = ({ location }) => {
+const Header = () => {
+  const location = useLocation()
   const selectedPage = location.pathname.slice(1)
 
   function classNameForSelectedPage(aPage) {
@@ -82,4 +83,4 @@ const Header = ({ location }) => {
   )
 }
 
-export default withRouter(Header)
+export default Header

@@ -12,6 +12,7 @@ const LettersGrid = ({ group = [], viewMode, contractedVowels = false }) => {
     <div className="letters-group">
       {group.map((letter) => (
         <OneLetter
+          key={letter}
           letter={letter}
           viewMode={viewMode}
           transliterationMap={transliterationMap}
@@ -25,7 +26,7 @@ export default LettersGrid
 
 export function OneLetter({ letter, viewMode, transliterationMap }) {
   return (
-    <div id={letter} key={letter} style={{ width: '129px' }}>
+    <div id={letter} style={{ width: '129px' }}>
       {viewMode === viewModes.DEVANAGARI_ONLY && transliterationMap[letter]}
       {viewMode === viewModes.DEVANAGARI_WITH_IAST && (
         <>

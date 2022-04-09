@@ -1,10 +1,5 @@
 import React from 'react'
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Redirect,
-} from 'react-router-dom'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Header from './Header'
 import LearnLetters from './LearnLetters'
 import ReadSimpleSyllables from './ReadSimpleSyllables'
@@ -14,33 +9,38 @@ import LearnContractedVowels from './LearnContractedVowels'
 import WriteYourOwn from './WriteYourOwn'
 
 const App = () => {
+  React.useEffect(() => {
+    if (window.location.pathname === '/')
+      window.location.replace('/learn-letters')
+  }, [])
   return (
     <Router>
       <Header />
       <div id="main-page">
-        <Switch>
-          <Route exact path="/">
-            <Redirect to="/learn-letters" />
-          </Route>
-          <Route path="/learn-letters">
-            <LearnLetters />
-          </Route>
-          <Route path="/read-simple-syllables">
-            <ReadSimpleSyllables />
-          </Route>
-          <Route path="/learn-contracted-vowels">
-            <LearnContractedVowels />
-          </Route>
-          <Route path="/read-contracted-vowels">
-            <ReadContractedVowels />
-          </Route>
-          <Route path="/read-all-words">
-            <ReadAllWords />
-          </Route>
-          <Route path="/write-your-own">
-            <WriteYourOwn />
-          </Route>
-        </Switch>
+        <Routes>
+          {/* <Route exact path="/"
+            element={Navigate replace to="/learn-letters" />}
+          /> */}
+          <Route path="/learn-letters" element={<LearnLetters />} />
+          <Route
+            path="/read-simple-syllables"
+            element={<ReadSimpleSyllables />}
+          />
+
+          <Route
+            path="/learn-contracted-vowels"
+            element={<LearnContractedVowels />}
+          />
+
+          <Route
+            path="/read-contracted-vowels"
+            element={<ReadContractedVowels />}
+          />
+
+          <Route path="/read-all-words" element={<ReadAllWords />} />
+
+          <Route path="/write-your-own" element={<WriteYourOwn />} />
+        </Routes>
       </div>
     </Router>
   )
