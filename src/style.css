@@ -123,11 +123,11 @@ div.transliteration {
 
 #word-list,
 #word-list-handle {
-  #position: fixed;
-  #left: 0;
-  #height: 100%;
-  #top: 0px;
-  #vertical-align: top;
+  /* position: fixed; */
+  /* left: 0; */
+  /* height: 100%; */
+  /* top: 0px; */
+  /* vertical-align: top; */
 }
 
 #word-list {
@@ -228,8 +228,8 @@ div#word-navigation {
 
 div#word-navigation button {
   background-color: white;
-  width: 41px;
-  height: 41px;
+  width: 5rem;
+  height: 5rem;
   border: none;
   margin-right: 40px;
 }
@@ -273,11 +273,6 @@ div#write-inputs {
   margin-top: 20px;
 }
 
-div#header-banner {
-  background-color: #8cd9e3;
-  width: 1179px;
-}
-
 div#write-inputs input#new-word {
   width: 50%;
   margin-top: 20px;
@@ -289,26 +284,24 @@ div#write-inputs input#new-word {
   vertical-align: middle;
   margin: 0 4px;
   background-image: url(images/seven_steps_green.PNG);
-  height: 41px;
+  height: 5rem;
   width: 90px;
   background-repeat: no-repeat;
   display: inline-block;
   text-decoration: none;
   position: relative;
-  top: -14px;
 }
 
 .number-orange {
   vertical-align: middle;
   margin: 0 4px;
   background-image: url(images/seven_steps_orange.PNG);
-  height: 41px;
+  height: 5rem;
   width: 90px;
   background-repeat: no-repeat;
   display: inline-block;
   text-decoration: none;
   position: relative;
-  top: -14px;
 }
 
 .number-orange:hover > p,

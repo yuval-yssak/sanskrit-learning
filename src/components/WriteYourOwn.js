@@ -1,30 +1,32 @@
 import React, { useState, useEffect } from 'react'
-import { makeStyles } from '@material-ui/core/styles'
 import TextField from '@material-ui/core/TextField'
 import transliterate from '../utils/transliterate'
 import FormControlLabel from '@material-ui/core/FormControlLabel'
 import Switch from '@material-ui/core/Switch'
 import FormGroup from '@material-ui/core/FormGroup'
+import styled from 'styled-components'
 
-const useStyles = makeStyles((theme) => ({
-  container: {
-    display: 'flex',
-    flexDirection: 'column',
-    flexWrap: 'wrap',
-  },
-  textField: {
-    marginLeft: theme.spacing(1),
-    marginRight: theme.spacing(1),
-  },
-}))
+const ButtonGrid = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.1rem;
+`
+
+const Container = styled.div`
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+`
+
+const MyTextField = styled(TextField)`
+  margin: 1rem;
+`
 
 export default function BasicTextFields() {
   const [inputValue, setInputValue] = useState('')
   const [devanagariValue, setDevanagariValue] = useState('')
   const [hideIAST, setHideIAST] = useState(false)
   const [hideDevanagari, setHideDevanagari] = useState(false)
-
-  const classes = useStyles()
 
   const handleIASTInputChange = (e) => {
     const { value } = e.target
@@ -43,12 +45,17 @@ export default function BasicTextFields() {
     setDevanagariValue(transliterate(inputValue))
   }, [inputValue])
 
+  const iastRef = React.createRef()
+  // React.useEffect(()=>
+  // iastRef.current.
+  // ,[])
   return (
-    <form className={classes.container} noValidate autoComplete="off">
+    // <form className={classes.container} noValidate autoComplete="off">
+    <Container noValidate autoComplete="off">
       <div>
-        <TextField
+        <MyTextField
+          inputRef={iastRef}
           id="iast-input-value"
-          className={classes.textField}
           label="Write in IAST"
           value={inputValue}
           margin="normal"
@@ -57,6 +64,50 @@ export default function BasicTextFields() {
             style: { fontSize: '4em', color: hideIAST ? 'white' : 'inherit' },
           }}
         />
+        <ButtonGrid>
+          {[
+            'ā',
+            'ī',
+            'ū',
+            'ṛ',
+            'ṝ',
+            'ṃ',
+            'ḥ',
+            'ñ',
+            'ṭ',
+            'ḍ',
+            'ṇ',
+            'ṅ',
+            'ś',
+            'ṣ',
+          ].map((letter) => (
+            <button
+              key={letter}
+              onClick={() => {
+                const $input = iastRef.current
+                const { selectionStart, selectionEnd } = $input
+
+                const tempArray = inputValue.split('')
+                tempArray.splice(
+                  selectionStart,
+                  selectionEnd - selectionStart,
+                  letter
+                )
+                setInputValue(tempArray.join(''))
+
+                setTimeout(() => {
+                  $input.focus()
+                  $input.setSelectionRange(
+                    selectionStart + 1,
+                    selectionStart + 1
+                  )
+                }, 0)
+              }}
+            >
+              {letter}
+            </button>
+          ))}
+        </ButtonGrid>
         <FormGroup row>
           <FormControlLabel
             control={
@@ -71,9 +122,8 @@ export default function BasicTextFields() {
         </FormGroup>
       </div>
       <div>
-        <TextField
+        <MyTextField
           id="devanagari-transliteration"
-          className={classes.textField}
           label="Devanagari"
           value={devanagariValue}
           margin="normal"
@@ -98,6 +148,7 @@ export default function BasicTextFields() {
           />
         </FormGroup>
       </div>
-    </form>
+    </Container>
+    // </form>
   )
 }
