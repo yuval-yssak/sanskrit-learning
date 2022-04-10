@@ -18,7 +18,9 @@ const Banner = styled.div`
   flex-wrap: wrap;
   justify-content: center;
 
-  & img {
+  & img:first-child {
+    height: 75px;
+    margin-top: 6px;
   }
 `
 
@@ -43,7 +45,7 @@ const Header = () => {
         <Banner>
           <img
             // style={{ verticalAlign: 'middle', margin: '0 20px', width: '140px' }}
-            src="../../images/logo.PNG"
+            src="/images/SAYR-logo-2.webp"
             alt="logo"
           />
           <img

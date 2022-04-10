@@ -7,6 +7,7 @@ import ReadContractedVowels from './ReadContractedVowels'
 import ReadAllWords from './ReadAllWords'
 import LearnContractedVowels from './LearnContractedVowels'
 import WriteYourOwn from './WriteYourOwn'
+import '../style.css'
 
 const App = () => {
   React.useEffect(() => {

@@ -2,11 +2,19 @@ import React from 'react'
 import { createRoot } from 'react-dom/client'
 import App from './components/App'
 import * as serviceWorker from './serviceWorker'
-import './style.css'
+import { createGlobalStyle } from 'styled-components'
+
+const CssReset = createGlobalStyle`
+`
 
 const container = document.getElementById('root')
 const root = createRoot(container)
-root.render(<App />)
+root.render(
+  <>
+    <CssReset />
+    <App />
+  </>
+)
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
