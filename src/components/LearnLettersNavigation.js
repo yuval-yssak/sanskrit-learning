@@ -7,7 +7,7 @@ import {
   aspirateAndCompoundsAndAvagraha,
 } from '../lib/basicLetters'
 
-const LearnLettesrNavigation = ({ setSelectedGroup }) => (
+const LearnLettersNavigation = ({ setSelectedGroup }) => (
   <div id="letter-categories">
     <label className="options-header">Letters: </label>
     <input
@@ -70,4 +70,4 @@ const LearnLettesrNavigation = ({ setSelectedGroup }) => (
   </div>
 )
 
-export default LearnLettesrNavigation
+export default LearnLettersNavigation

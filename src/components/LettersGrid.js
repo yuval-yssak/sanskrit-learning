@@ -26,25 +26,19 @@ export default LettersGrid
 
 export function OneLetter({ letter, viewMode, transliterationMap }) {
   return (
-    <div id={letter} style={{ width: '129px' }}>
+    <div id={letter}>
       {viewMode === viewModes.DEVANAGARI_ONLY && transliterationMap[letter]}
       {viewMode === viewModes.DEVANAGARI_WITH_IAST && (
         <>
           {transliterationMap[letter]}
-          {
-            <div className="transliteration" style={{ width: '129px' }}>
-              {letter}
-            </div>
-          }
+          {<div className="transliteration">{letter}</div>}
         </>
       )}
       {viewMode === viewModes.IAST_ONLY && letter}
       {viewMode === viewModes.IAST_WITH_DEVANAGARI && (
         <>
           <div>{letter}</div>
-          <div className="transliteration" style={{ width: '129px' }}>
-            {transliterationMap[letter]}
-          </div>
+          <div className="transliteration">{transliterationMap[letter]}</div>
         </>
       )}
     </div>

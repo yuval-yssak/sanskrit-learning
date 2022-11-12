@@ -27,6 +27,12 @@ div#header {
   font-size: inherit;
 }
 
+.letters-group {
+  display: grid;
+  justify-content: space-between;
+  grid-template-columns: repeat(auto-fit, minmax(max-content, 129px));
+}
+
 .letters-group div {
   font-size: 65px;
   display: inline-block;

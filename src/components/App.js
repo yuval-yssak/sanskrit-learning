@@ -5,6 +5,7 @@ import LearnLetters from './LearnLetters'
 import ReadSimpleSyllables from './ReadSimpleSyllables'
 import ReadContractedVowels from './ReadContractedVowels'
 import ReadAllWords from './ReadAllWords'
+import LearnConjuncts from './LearnConjuncts'
 import LearnContractedVowels from './LearnContractedVowels'
 import WriteYourOwn from './WriteYourOwn'
 import '../style.css'
@@ -37,6 +38,8 @@ const App = () => {
             path="/read-contracted-vowels"
             element={<ReadContractedVowels />}
           />
+
+          <Route path="/learn-conjuncts" element={<LearnConjuncts />} />
 
           <Route path="/read-all-words" element={<ReadAllWords />} />
 
